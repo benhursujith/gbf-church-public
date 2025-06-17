@@ -16,7 +16,7 @@ const customStyles = {
 
   body: {
     color: '#ffffff !important',
-    backgroundColor: '#f56d6e',
+    backgroundColor: '#2D71EA',
     moreLink: {
       color: '#ffffff',
     },

@@ -52,9 +52,8 @@ export function Header({
 
   return (
     <header
-      className={`main-header fixed top-0 left-0 w-full z-20 pointer-events-none ${
-        scrolled ? 'scrolled' : ''
-      }
+      className={`main-header fixed top-0 left-0 w-full z-20 pointer-events-none ${scrolled ? 'scrolled' : ''
+        }
       ${isOpen ? 'mobile-nav-open' : ''}
       
       `}
@@ -83,9 +82,8 @@ export function Header({
               </li>
               <li className='block mx-4 my-0 xl:mx-2 xl:my-4'>
                 <Link
-                  className={`group px-0 pt-4 pb-3 flex items-center w-full font-sans font-regular border-b border-white border-opacity-40 xl:hover:text-coral transition-colors xl:inline xl:px-2 xl:py-0 xl:border-none ${
-                    pathname === '/who-we-are' ? 'text-coral' : ''
-                  }  xl:font-bold`}
+                  className={`group px-0 pt-4 pb-3 flex items-center w-full font-sans font-regular border-b border-white border-opacity-40 xl:hover:text-coral transition-colors xl:inline xl:px-2 xl:py-0 xl:border-none ${pathname === '/who-we-are' ? 'text-coral' : ''
+                    }  xl:font-bold`}
                   href='/who-we-are'
                 >
                   <span>Who We Are</span>
@@ -105,9 +103,8 @@ export function Header({
               </li>
               <li className='block mx-4 my-0 xl:mx-2 xl:my-4'>
                 <Link
-                  className={`group px-0 pt-4 pb-3 flex items-center w-full font-sans font-regular border-b border-white border-opacity-40 xl:hover:text-coral transition-colors xl:inline xl:px-2 xl:py-0 xl:border-none ${
-                    pathname === '/what-we-believe' ? 'text-coral' : ''
-                  }  xl:font-bold`}
+                  className={`group px-0 pt-4 pb-3 flex items-center w-full font-sans font-regular border-b border-white border-opacity-40 xl:hover:text-coral transition-colors xl:inline xl:px-2 xl:py-0 xl:border-none ${pathname === '/what-we-believe' ? 'text-coral' : ''
+                    }  xl:font-bold`}
                   href='/what-we-believe'
                 >
                   <span>What We Believe</span>
@@ -127,9 +124,8 @@ export function Header({
               </li>
               <li className='block mx-4 my-0 xl:mx-2 xl:my-4'>
                 <Link
-                  className={`group px-0 pt-4 pb-3 flex items-center w-full font-sans font-regular border-b border-white border-opacity-40 xl:hover:text-coral transition-colors xl:inline xl:px-2 xl:py-0 xl:border-none ${
-                    pathname === '/leadership' ? 'text-coral' : ''
-                  }  xl:font-bold`}
+                  className={`group px-0 pt-4 pb-3 flex items-center w-full font-sans font-regular border-b border-white border-opacity-40 xl:hover:text-coral transition-colors xl:inline xl:px-2 xl:py-0 xl:border-none ${pathname === '/leadership' ? 'text-coral' : ''
+                    }  xl:font-bold`}
                   href='/leadership'
                 >
                   <span>Leadership</span>
@@ -155,9 +151,8 @@ export function Header({
               {/* Sermons Link */}
               <li className='block mx-4 my-0 xl:mx-2 xl:my-4'>
                 <Link
-                  className={`group px-0 pt-4 pb-3 flex items-center w-full font-sans font-regular border-b border-white border-opacity-40 xl:hover:text-coral transition-colors xl:inline xl:px-2 xl:py-0 xl:border-none ${
-                    pathname === '/sermons' ? 'text-coral' : ''
-                  } border-none mb-8 xl:mb-0`}
+                  className={`group px-0 pt-4 pb-3 flex items-center w-full font-sans font-regular border-b border-white border-opacity-40 xl:hover:text-coral transition-colors xl:inline xl:px-2 xl:py-0 xl:border-none ${pathname === '/sermons' ? 'text-coral' : ''
+                    } border-none mb-8 xl:mb-0`}
                   href='/sermons'
                 >
                   <span>Sermons</span>
@@ -178,9 +173,8 @@ export function Header({
               {/* Podcasts Link */}
               <li className='block mx-4 my-0 xl:mx-2 xl:my-4'>
                 <Link
-                  className={`group px-0 pt-4 pb-3 flex items-center w-full font-sans font-regular border-b border-white border-opacity-40 xl:hover:text-coral transition-colors xl:inline xl:px-2 xl:py-0 xl:border-none ${
-                    pathname === '/podcasts' ? 'text-coral' : ''
-                  } border-none mb-8 xl:mb-0`}
+                  className={`group px-0 pt-4 pb-3 flex items-center w-full font-sans font-regular border-b border-white border-opacity-40 xl:hover:text-coral transition-colors xl:inline xl:px-2 xl:py-0 xl:border-none ${pathname === '/podcasts' ? 'text-coral' : ''
+                    } border-none mb-8 xl:mb-0`}
                   href='/podcasts'
                 >
                   <span>Podcasts</span>
@@ -270,9 +264,8 @@ export function Header({
               </li>
               <li className='block mx-4 my-0 xl:mx-2 xl:my-4'>
                 <Link
-                  className={`group px-0 pt-4 pb-3 flex items-center w-full font-sans font-regular border-b border-white border-opacity-40 xl:hover:text-coral transition-colors xl:inline xl:px-2 xl:py-0 xl:border-none  xl:font-bold ${
-                    pathname === '/who-we-are' ? 'text-coral' : ''
-                  }`}
+                  className={`group px-0 pt-4 pb-3 flex items-center w-full font-sans font-regular border-b border-white border-opacity-40 xl:hover:text-coral transition-colors xl:inline xl:px-2 xl:py-0 xl:border-none  xl:font-bold ${pathname === '/who-we-are' ? 'text-coral' : ''
+                    }`}
                   href='/who-we-are'
                 >
                   <span>Who We Are</span>
@@ -292,9 +285,8 @@ export function Header({
               </li>
               <li className='block mx-4 my-0 xl:mx-2 xl:my-4'>
                 <Link
-                  className={`group px-0 pt-4 pb-3 flex items-center w-full font-sans font-regular border-b border-white border-opacity-40 xl:hover:text-coral transition-colors xl:inline xl:px-2 xl:py-0 xl:border-none  xl:font-bold ${
-                    pathname === '/what-we-believe' ? 'text-coral' : ''
-                  }`}
+                  className={`group px-0 pt-4 pb-3 flex items-center w-full font-sans font-regular border-b border-white border-opacity-40 xl:hover:text-coral transition-colors xl:inline xl:px-2 xl:py-0 xl:border-none  xl:font-bold ${pathname === '/what-we-believe' ? 'text-coral' : ''
+                    }`}
                   href='/what-we-believe'
                 >
                   <span>What We Believe</span>
@@ -314,9 +306,8 @@ export function Header({
               </li>
               <li className='block mx-4 my-0 xl:mx-2 xl:my-4'>
                 <Link
-                  className={`group px-0 pt-4 pb-3 flex items-center w-full font-sans font-regular border-b border-white border-opacity-40 xl:hover:text-coral transition-colors xl:inline xl:px-2 xl:py-0 xl:border-none  xl:font-bold ${
-                    pathname === '/leadership' ? 'text-coral' : ''
-                  }`}
+                  className={`group px-0 pt-4 pb-3 flex items-center w-full font-sans font-regular border-b border-white border-opacity-40 xl:hover:text-coral transition-colors xl:inline xl:px-2 xl:py-0 xl:border-none  xl:font-bold ${pathname === '/leadership' ? 'text-coral' : ''
+                    }`}
                   href='/leadership'
                 >
                   <span>Leadership</span>
@@ -338,9 +329,8 @@ export function Header({
             <ul className='flex flex-wrap flex-col xl:flex-row xl:items-center list-none pl-0 my-0'>
               <li className='block mx-4 my-0 xl:mx-2 xl:my-4'>
                 <Link
-                  className={`group px-0 pt-4 pb-3 flex items-center w-full font-sans font-regular border-b border-white border-opacity-40 xl:hover:text-coral transition-colors xl:inline xl:px-2 xl:py-0 xl:border-none  xl:font-bold ${
-                    pathname === '/sermons' ? 'text-coral' : ''
-                  }`}
+                  className={`group px-0 pt-4 pb-3 flex items-center w-full font-sans font-regular border-b border-white border-opacity-40 xl:hover:text-coral transition-colors xl:inline xl:px-2 xl:py-0 xl:border-none  xl:font-bold ${pathname === '/sermons' ? 'text-coral' : ''
+                    }`}
                   href='/sermons'
                 >
                   <span>Sermons</span>
@@ -360,9 +350,8 @@ export function Header({
               </li>
               <li className='block mx-4 my-0 xl:mx-2 xl:my-4'>
                 <Link
-                  className={`group px-0 pt-4 pb-3 flex items-center w-full font-sans font-regular border-b border-white border-opacity-40 xl:hover:text-coral transition-colors xl:inline xl:px-2 xl:py-0 xl:border-none  xl:font-bold ${
-                    pathname === '/podcasts' ? 'text-coral' : ''
-                  }`}
+                  className={`group px-0 pt-4 pb-3 flex items-center w-full font-sans font-regular border-b border-white border-opacity-40 xl:hover:text-coral transition-colors xl:inline xl:px-2 xl:py-0 xl:border-none  xl:font-bold ${pathname === '/podcasts' ? 'text-coral' : ''
+                    }`}
                   href='/podcasts'
                 >
                   <span>Podcasts</span>

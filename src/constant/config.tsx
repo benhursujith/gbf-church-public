@@ -2,7 +2,7 @@ import { Podcast, Rss, Youtube } from 'lucide-react';
 import Link from 'next/link';
 
 export const siteConfig = {
-  title: 'Calvary Bible Fellowship',
+  title: 'Grace Bible Fellowship',
   description: 'Salt And Light',
   url: 'https://cbf-church.org',
   email: 'reachout@cbf-church.org',
@@ -11,7 +11,7 @@ export const siteConfig = {
 
 export const homepageHero = {
   header: 'WELCOME TO',
-  title: 'Calvary Bible Fellowship',
+  title: 'Grace Bible Fellowship',
   description:
     'To whoever will come - all who are spiritually weary; all who mourn, all who struggle, all who sin, all who are lonely - this church opens wide her doors and offers them welcome in the name of the Lord and Savior Jesus Christ',
   video: '/videos/hero.mp4',
@@ -81,7 +81,7 @@ export const whoWeAreHero = {
   title: 'Our',
   subtitle: 'Story.',
   description:
-    'Calvary Bible Fellowship was started by a few like-minded families who wanted to build a space for young people to follow Jesus, serve their city, and invite others to do the same.',
+    'Grace Bible Fellowship was started by a few like-minded families who wanted to build a space for young people to follow Jesus, serve their city, and invite others to do the same.',
   image: '/images/aboutus.jpg',
   timelineHeader: 'Our Church Timeline',
   timelineDescription:
@@ -100,7 +100,7 @@ export const whatWeBelieveHero = {
     'We are committed to being a family made up of different generations, backgrounds, ethnicities and abilities. Unity in the midst of diversity is a big part of God`s Kingdom, and one we celebrate.',
   whatWeBelieveTitle: 'Mission Statement',
   whatWeBelieveDescription:
-    'This is our mission statement from when Calvary Bible Fellowship was formed. It still represents what we think matters most.',
+    'This is our mission statement from when Grace Bible Fellowship was formed. It still represents what we think matters most.',
   careGroupTitle: 'Care Group Schedule',
   careGroupDescription:
     'Care groups provide a sense of family, deepen prayer life, offer support in crisis, facilitate sharing the faith, develop leadership, and enhance worship, aligning with the New Testament model of Christian community.',
@@ -115,7 +115,7 @@ export const leadershipPageHero = {
   image: '/images/leadership.jpg',
   eldersTitle: 'Meet Our Elders',
   eldersDescription:
-    'Elders oversee the life, teaching, and mission of Calvary Bible Fellowship, and work to keep everything we do focused on our vision to be the church and reach the city.',
+    'Elders oversee the life, teaching, and mission of Grace Bible Fellowship, and work to keep everything we do focused on our vision to be the church and reach the city.',
   deaconsTitle: 'Meet Our Deacons',
   deaconsDescription:
     'Deacons use their gifts to serve the Elders by providing  perspective, wisdom and counsel, and encouragement on church-wide theological or strategic matters',
@@ -123,68 +123,47 @@ export const leadershipPageHero = {
 
 export const leadershipElders = [
   {
-    name: 'Benjamin Mathew',
+    name: 'George Mattackal',
     title: 'ELDER',
-    bio: 'Benjamin (Benji) was born in the UAE and came to know Christ during the first Gulf War. After a brief corporate stint, he felt the Lord`s leading to step into missions. He loves connecting with people from different cultures and seeing how the gospel breaks through all barriers. He has a burden for Bible translation, desiring to see God`s Word available to all people groups. He finds missions exciting and adventurous, and loves studying how creation, history and archaeology concur with Scripture. Benji enjoys sports, good jokes, unique cuisines, coffee and meaningful conversation. He and his wife, Preethi, have the joy of raising four daughters and desire to build a discipleship-centric home.',
-    image: '/images/benjamin.jpg',
+    bio: "George has served as an elder of CBF since 2010. He is passionate about teaching God's Word with a focus on practical application. He most enjoys seeing believers grow spiritually by applying Scriptural principles to every area of life. George's wife Sairah went to be with the Lord in 2012, a month after delivering their ninth child. Coming to terms with this loss strengthened his belief in God's sovereignty and faithfulness, and he sees all circumstances in life as part of God's work of molding us closer to the image of Christ. George works for a multinational IT services company and is the father of two girls and seven boys.",
+    image: '/images/George.png',
   },
   {
-    name: 'Charles Mathew',
+    name: 'George Thomas',
     title: 'ELDER',
-    bio: 'Charlie has been with Calvary Bible Fellowship since its inception. Along with his secular profession as a technology marketeer, he is involved in teaching and personally encouraging individuals to emulate Christ. He is particularly passionate about Biblical history and how God’s plan of salvation for mankind has been orchestrated through the ages. His other interests include people, places, cultures, music and football. A dad of two boys, he has been married to his wife Deema since 2005.',
-    image: '/images/charles.jpg',
+    bio: "George (Liju) was born and brought up in Doha, landed in India as a teenager and has been here ever since. His education has taken him through Trivandrum, Chennai and Pune until he landed in Bangalore where he works in the IT sector. He loves spending time with people one-on-one and in small groups, preferably over a lovely cup of chai, to enable & empower them to discover God's Word for themselves. He and his lovely wife Deepa have the privilege and responsibility of raising and homeschooling their children: Yohan, Yana and Yanica, who keep him on his toes and drive him back to God!",
+    image: '/images/Liju.png',
   },
   {
-    name: 'Pradeep Daniel',
+    name: 'Jerry William',
     title: 'ELDER',
-    bio: 'Pradeep grew up in Chennai and has been part of Calvary Bible Fellowship from its start. He serves through church administration, service, group studies and by connecting with people one-on-one. He is an automobile enthusiast, which has opened many doors for him to reach out to young people. Serving the church and the Lord`s people behind the scenes gives him the greatest joy. He is married to Litty and the father of two boys. As a family, they desire to bless the church through their lives and home.',
-    image: '/images/pradeep.jpg',
-  },
-  {
-    name: 'Revanth T',
-    title: 'ELDER',
-    bio: 'Revanth came to know the Lord when he was 10 years old. Ever since, he has always desired to know the Lord more and make Him known. After a brief stint in the IT industry, he answered God’s call to step into full-time ministry. He is passionate about preaching, teaching God`s Word and theology. His vision is to equip churches by training Christians to study and teach the Word effectively. He also enjoys one-on-one conversation about Christian life. Revanth and his wife Angela have two boys, Asher and Zacharias. Their home is open for people to share good food and conversations about life, faith and cricket.',
-    image: '/images/revanth.jpg',
+    bio: 'Jerry is a marketer by profession who grew up in Delhi and spent considerable time in Mumbai before moving to Bangalore in 2018. He is married to Bernice and they have two (though it sometimes feels like many more!) kids, Anugrah and Dia. They love having an open home where people can unwind with music, food and conversation.',
+    image: '/images/Jerry.png',
   },
 ];
 
 export const leadershipDeacons = [
   {
-    name: 'Jaison George',
+    name: 'Eldy Eldhose',
     title: 'DEACON',
-    image: '/images/jaison.jpg',
-  },
-  // {
-  //   name: 'Job Sam Koshy',
-  //   title: 'DEACON',
-  //   image: '/images/job.jpg',
-  // },
-  {
-    name: 'John Paul',
-    title: 'DEACON',
-    image: '/images/john.jpg',
+    image: '/images/Eldy.png',
   },
   {
-    name: 'Kishor Hegde',
+    name: 'Jean Thomas',
     title: 'DEACON',
-    image: '/images/kishor.jpg',
+    image: '/images/Jean.png',
   },
 
   {
-    name: 'Pisty Mathew',
+    name: 'Ben Kurian',
     title: 'DEACON',
-    image: '/images/pisty.jpg',
+    image: '/images/Ben.png',
   },
 
   {
-    name: 'Prithvi G',
+    name: 'Nithin Philip',
     title: 'DEACON',
-    image: '/images/prithvi.jpg',
-  },
-  {
-    name: 'Siji George',
-    title: 'DEACON',
-    image: '/images/siji.jpg',
+    image: '/images/Nithin.png',
   },
 ];
 
@@ -197,7 +176,7 @@ export const contactUsContent = {
   image: '/images/contact.jpg',
   location: 'https://maps.app.goo.gl/FJJRHXKRXoFJGJPN7',
   addressHeading: 'Sunday Gathering Location',
-  addressTitle: 'Calvary Bible Fellowship',
+  addressTitle: 'Grace Bible Fellowship',
   address:
     ' 90, Osborne Rd, near Lake Side Hospital, Hermit Colony, Sivanchetti Gardens, Bengaluru, Karnataka 560042',
   addressImage: '/images/jest.jpg',
@@ -229,7 +208,7 @@ export const contactUsFAQ = [
     answer2: (
       <>
         <p>
-          At Calvary Bible Fellowship, a team of{' '}
+          At Grace Bible Fellowship, a team of{' '}
           <Link className='underline hover:text-coral' href='/elders'>
             'Elders'
           </Link>{' '}
@@ -246,7 +225,7 @@ export const contactUsFAQ = [
     answer1: (
       <>
         <p>
-          Yes. Calvary Bible Fellowship was started with you in mind. Please
+          Yes. Grace Bible Fellowship was started with you in mind. Please
           bring your doubts, your brain, and your baggage — they are all welcome
           here. You will have the opportunity to learn more, ask questions,
           share hurts from past experiences, all at your own pace. In fact, you
@@ -274,13 +253,13 @@ export const contactUsFAQ = [
       <>
         <p>
           We all recognize the brokenness of our world. We see it everywhere and
-          we know it all too well: it’s in the corrupt failing of human systems,
-          in the hurt we’ve known from others, and even in the selfish leanings
+          we know it all too well: it's in the corrupt failing of human systems,
+          in the hurt we've known from others, and even in the selfish leanings
           of our own hearts. But where is the beauty? Where can we find hope?{' '}
         </p>
         <p>
           We believe hope is found in the person of Jesus Christ. He was a real
-          human that existed in history and also the one true God who’d come to
+          human that existed in history and also the one true God who'd come to
           save the world. God is personal and powerful. He came in Jesus — not
           to condemn the world, but to save it. He is good, and is known by his
           love.
@@ -294,16 +273,16 @@ export const contactUsFAQ = [
         </p>
         <p>
           {' '}
-          We want you to trust Jesus with your everything. You don’t have to
-          come to church first, and you don’t have to have it all figured out. A
+          We want you to trust Jesus with your everything. You don't have to
+          come to church first, and you don't have to have it all figured out. A
           relationship with God starts with trust. Trust that he is good. Trust
           that his way of life will mean more good for you than your own desires
           or opinions.
         </p>
         <p>
           {' '}
-          You can talk to him right now. That’s where it starts. Tell him you
-          trust him with your whole heart. Tell him you’re turning your whole
+          You can talk to him right now. That's where it starts. Tell him you
+          trust him with your whole heart. Tell him you're turning your whole
           life over to him. He hears you.
         </p>
       </>
@@ -614,8 +593,7 @@ export const sermonPageSermons = [
   {
     id: 'PL8jyQKbc-svLmuvdyJa_yYo_YqHeOO4W7',
     title: 'Following the Savior',
-    description:
-      'Discipleship is the process of learning to love and follow Jesus and becoming more like him in our attitudes and actions. It’s also seeking to make other disciples who want to do the same thing.',
+    description: "Discipleship is the process of learning to love and follow Jesus and becoming more like him in our attitudes and actions. It's also seeking to make other disciples who want to do the same thing.",
     image: '/images/fts.jpg',
     link: '/sermon/following-the-savior',
   },
@@ -786,7 +764,7 @@ export const ourBeliefs = [
     content: (
       <>
         <p>
-          We believe that “all Scripture is inspired by God,” by which we
+          We believe that "all Scripture is inspired by God," by which we
           understand that the sixty-six books of the Bible are a divine product.
           God used a process of dual authorship to provide His written
           revelation to mankind. The Holy Spirit exerted supernatural influence
@@ -797,7 +775,7 @@ export const ourBeliefs = [
         <p>
           {' '}
           We believe that the Bible is therefore without any error in the
-          original documents, the supreme and complete revelation of God’s will
+          original documents, the supreme and complete revelation of God's will
           for salvation, and the only infallible rule of faith and practice. (2
           Timothy 3:16-17; 2 Peter 1:21; John 16:13-14; 17:17; Numbers 23:19;
           Psalm 12:6; Hebrews 4:12; 6:18; Matthew 5:18; 24:35)
@@ -826,13 +804,13 @@ export const ourBeliefs = [
       <>
         <p>
           We believe that man was created by God in His image and likeness,
-          without sin, to enjoy God’s fellowship, live in His will, and glorify
+          without sin, to enjoy God's fellowship, live in His will, and glorify
           Him. Adam and Eve, the historical parents of the entire human race,
           chose to disobey God, and by this sin, lost their original innocence
           and communion with Him.{' '}
         </p>
         <p>
-          We also believe that, as the head of the human race, Adam’s fall
+          We also believe that, as the head of the human race, Adam's fall
           became the fall of all of humanity, so that corruption, guilt, death,
           and condemnation belong to everyone born into this world, the Lord
           Jesus Christ being the only exception. All men are thus corrupt by
@@ -859,7 +837,7 @@ export const ourBeliefs = [
         </p>
         <p>
           {' '}
-          We also believe that in fulfillment of God’s redemptive plan, Jesus
+          We also believe that in fulfillment of God's redemptive plan, Jesus
           Christ voluntarily suffered and died on a cross, was buried, rose from
           the dead on the third day, ascended into heaven, and is seated at the
           right hand of God the Father as our High Priest and Advocate.
@@ -884,11 +862,11 @@ export const ourBeliefs = [
         </p>
         <p>
           We believe that the resurrection of Jesus Christ from the dead is
-          God’s vindication of His Person and claims, and a sure proof that His
+          God's vindication of His Person and claims, and a sure proof that His
           atoning work on the cross has been accepted.
         </p>
         <p>
-          We also believe that on the basis of Jesus Christ’s work on the cross,
+          We also believe that on the basis of Jesus Christ's work on the cross,
           anyone who believes in Him is freed from the punishment of sin,
           declared righteous, given eternal life, and adopted into the family of
           God. The believer, however, retains his sin nature, which cannot be
@@ -899,12 +877,12 @@ export const ourBeliefs = [
         <p>
           We also believe that the believer will be made perfect when he
           receives the resurrection body at the coming of the Lord Jesus Christ.
-          We believe that, because of God’s love for His children, because of
+          We believe that, because of God's love for His children, because of
           the efficacy of the work of Christ on the cross, because of the
           unceasing intercession and advocacy of Christ in heaven, because of
-          God’s faithfulness to His covenants, because of the indwelling
+          God's faithfulness to His covenants, because of the indwelling
           presence of the Holy Spirit, all who are believers, once saved, shall
-          be kept saved by God’s power, and are thus secure in Christ forever.
+          be kept saved by God's power, and are thus secure in Christ forever.
         </p>
         <p>
           We also believe that it is the privilege of every child of God to
@@ -949,7 +927,7 @@ export const ourBeliefs = [
           We also believe that certain gifts of the Holy Spirit such as speaking
           in tongues and miracles were temporary, and primarily intended for the
           initial days of the church. Their purpose was to direct attention to
-          and validate the apostles as revealers of God’s word.{' '}
+          and validate the apostles as revealers of God's word.{' '}
         </p>
         <p>
           {' '}
@@ -972,8 +950,8 @@ export const ourBeliefs = [
         We believe in the one universal church, whose Head is the Lord Jesus
         Christ, and comprises all those who are united to Him by faith. This
         universal church finds its expression in local churches where believers
-        are taught God’s word, engage in corporate worship, practice the
-        ordinances of baptism and Lord’s supper, build each other’s faith
+        are taught God's word, engage in corporate worship, practice the
+        ordinances of baptism and Lord's supper, build each other's faith
         through the use of spiritual gifts, hold each other accountable, submit
         to leadership, serve each other in love, and engage in local and world
         evangelization. (Matthew 16:16-18; 18:5-14; 28:19-20; Acts 2:38-47;
@@ -995,7 +973,7 @@ export const ourBeliefs = [
         asleep in Him. This event is presented in Scripture as our blessed hope
         for which we should be constantly looking. We believe that at the end of
         the tribulation period, the Lord Jesus Christ will return with power and
-        great glory to set up the millennial kingdom when God’s covenant
+        great glory to set up the millennial kingdom when God's covenant
         promises will be realized for the nation of Israel as she is restored to
         her own land, and the whole world will be brought to the knowledge of
         God. This period of thousand years will be followed by the final
@@ -1051,7 +1029,7 @@ export const timelineItems = [
       type: 'IMAGE',
     },
 
-    cardDetailedText: `By April 2009, Airport Road Fellowship had outgrown the gymnasium. With extraordinary timing, the Ashirvad auditorium in St. Joseph’s Jesuit Seminary on St. Mark’s Road became available and the church moved their meetings there. With the name “Airport Road Fellowship” now out of date, the church was renamed 'Calvary Bible Fellowship' (CBF).`,
+    cardDetailedText: `By April 2009, Airport Road Fellowship had outgrown the gymnasium. With extraordinary timing, the Ashirvad auditorium in St. Joseph's Jesuit Seminary on St. Mark's Road became available and the church moved their meetings there. With the name "Airport Road Fellowship" now out of date, the church was renamed 'Calvary Bible Fellowship' (CBF).`,
   },
   {
     title: '2017',
@@ -1077,7 +1055,7 @@ export const timelineItems = [
       type: 'IMAGE',
     },
 
-    cardDetailedText: `In 2022, the church had significantly grown in numbers. To meet the discipleship needs of it's members and to serve college-going students, Calvary Bible Fellowship prayerfully planted Grace Bible Fellowship within Christ University's Koramangala campus.`,
+    cardDetailedText: `In 2022, the church had significantly grown in numbers. To meet the discipleship needs of it's members and to serve college-going students, Grace Bible Fellowship prayerfully planted Grace Bible Fellowship within Christ University's Koramangala campus.`,
   },
   {
     title: '2024',

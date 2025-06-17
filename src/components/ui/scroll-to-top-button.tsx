@@ -28,7 +28,7 @@ function ScrollToTopButton({ delay, isOpen }: ReturnToTopButtonProps) {
       className={`${y === 0 ? 'scale-0' : 'scale-100'} 
       ${isOpen ? 'hidden' : ''}
       
-      w-12 h-12 transition-transform duration-200 flex fixed right-10 bottom-10 bg-[#f56d6e] rounded-full shadow-lg shadow-gray-900 justify-center items-center z-50`}
+      w-12 h-12 transition-transform duration-200 flex fixed right-10 bottom-10 bg-[#2D71EA] rounded-full shadow-lg shadow-gray-900 justify-center items-center z-50`}
     >
       <ArrowUp className='w-6 h-6' />
     </button>
