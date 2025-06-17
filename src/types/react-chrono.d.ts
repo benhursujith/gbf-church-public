@@ -15,13 +15,29 @@ declare module 'react-chrono' {
     };
   }
 
+  interface FontSizes {
+    title?: string;
+    cardTitle?: string;
+    cardSubtitle?: string;
+    cardText?: string;
+  }
+
   export interface ChronoProps {
     items: TimelineItemModel[];
     mode?: 'VERTICAL' | 'HORIZONTAL' | 'VERTICAL_ALTERNATING';
     cardHeight?: number;
+    cardWidth?: number;
+    mediaHeight?: number;
+    contentDetailsHeight?: number;
     slideShow?: boolean;
     slideItemDuration?: number;
-    theme?: any;
+    theme?: {
+      primary: string;
+      secondary: string;
+      cardBgColor: string;
+      cardForeColor: string;
+      titleColor: string;
+    };
     cardLess?: boolean;
     flipLayout?: boolean;
     enableOutline?: boolean;
@@ -33,6 +49,8 @@ declare module 'react-chrono' {
     onScrollEnd?: () => void;
     onItemSelected?: (selected: TimelineItemModel) => void;
     activeItemIndex?: number;
+    focusActiveItemOnLoad?: boolean;
+    fontSizes?: FontSizes;
     children?: ReactNode;
   }
 

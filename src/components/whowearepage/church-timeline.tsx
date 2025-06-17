@@ -26,7 +26,7 @@ export function ChurchTimeline() {
                   cardHeight={300}
                   cardWidth={650}
                   mediaHeight={300}
-                  scrollable={{ scrollbar: true }}
+                  scrollable={true}
                   contentDetailsHeight={100}
                   fontSizes={{
                     title: '1rem',
