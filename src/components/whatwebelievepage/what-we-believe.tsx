@@ -77,8 +77,8 @@ export function WhatWeBelieve() {
       />
       {/* Sub-Heading */}
       <SubHeading
-        title={whatWeBelieveHero.whatWeBelieveTitle}
-        description={whatWeBelieveHero.whatWeBelieveDescription}
+        title={whatWeBelieveHero.title}
+        description={whatWeBelieveHero.description}
         color='black'
       />
       <section className='relative z-10 overflow-hidden bg-black text-white'>
