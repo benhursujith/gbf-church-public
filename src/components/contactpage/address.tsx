@@ -68,7 +68,7 @@ export function Address() {
                       <iframe
                         className='w-full h-[50vh]'
                         id='gmap_canvas'
-                        src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.7575691825377!2d77.6180864!3d12.987351799999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae168d9128e881%3A0x432e6df0f40fd9ca!2sWorld%20Cassette%20Outreach%20of%20India%20(WCOI)!5e0!3m2!1sen!2sin!4v1715003269293!5m2!1sen!2sin'
+                        src='https://g.co/kgs/9XuLd9o'
                       />
                     </div>
                   </div>

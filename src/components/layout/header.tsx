@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import React, { Dispatch, useEffect, useState } from 'react';
+import React, { Dispatch, useEffect, useRef, useState } from 'react';
 
 import { contactUsContent } from '@/constant/config';
 
@@ -50,6 +50,25 @@ export function Header({
     }, 1200);
   };
 
+  const [resourcesDropdownOpen, setResourcesDropdownOpen] = useState(false); // for desktop/mobile dropdown
+  const resourcesDropdownRef = useRef<HTMLLIElement>(null);
+
+  useEffect(() => {
+    if (!resourcesDropdownOpen) return;
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        resourcesDropdownRef.current &&
+        !resourcesDropdownRef.current.contains(event.target as Node)
+      ) {
+        setResourcesDropdownOpen(false);
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [resourcesDropdownOpen]);
+
   return (
     <header
       className={`main-header fixed top-0 left-0 w-full z-20 pointer-events-none ${scrolled ? 'scrolled' : ''
@@ -82,7 +101,7 @@ export function Header({
               </li>
               <li className='block mx-4 my-0 xl:mx-2 xl:my-4'>
                 <Link
-                  className={`group px-0 pt-4 pb-3 flex items-center w-full font-sans font-regular border-b border-white border-opacity-40 xl:hover:text-coral transition-colors xl:inline xl:px-2 xl:py-0 xl:border-none ${pathname === '/who-we-are' ? 'text-coral' : ''
+                  className={`group px-0 pt-4 pb-3 flex items-center w-full font-sans font-regular border-b border-white border-opacity-40 xl:hover:text-[#2e71ea] transition-colors xl:inline xl:px-2 xl:py-0 xl:border-none ${pathname === '/who-we-are' ? 'text-[#2e71ea]' : ''
                     }  xl:font-bold`}
                   href='/who-we-are'
                 >
@@ -103,7 +122,7 @@ export function Header({
               </li>
               <li className='block mx-4 my-0 xl:mx-2 xl:my-4'>
                 <Link
-                  className={`group px-0 pt-4 pb-3 flex items-center w-full font-sans font-regular border-b border-white border-opacity-40 xl:hover:text-coral transition-colors xl:inline xl:px-2 xl:py-0 xl:border-none ${pathname === '/what-we-believe' ? 'text-coral' : ''
+                  className={`group px-0 pt-4 pb-3 flex items-center w-full font-sans font-regular border-b border-white border-opacity-40 xl:hover:text-[#2e71ea] transition-colors xl:inline xl:px-2 xl:py-0 xl:border-none ${pathname === '/what-we-believe' ? 'text-[#2e71ea]' : ''
                     }  xl:font-bold`}
                   href='/what-we-believe'
                 >
@@ -124,7 +143,7 @@ export function Header({
               </li>
               <li className='block mx-4 my-0 xl:mx-2 xl:my-4'>
                 <Link
-                  className={`group px-0 pt-4 pb-3 flex items-center w-full font-sans font-regular border-b border-white border-opacity-40 xl:hover:text-coral transition-colors xl:inline xl:px-2 xl:py-0 xl:border-none ${pathname === '/leadership' ? 'text-coral' : ''
+                  className={`group px-0 pt-4 pb-3 flex items-center w-full font-sans font-regular border-b border-white border-opacity-40 xl:hover:text-[#2e71ea] transition-colors xl:inline xl:px-2 xl:py-0 xl:border-none ${pathname === '/leadership' ? 'text-[#2e71ea]' : ''
                     }  xl:font-bold`}
                   href='/leadership'
                 >
@@ -143,55 +162,41 @@ export function Header({
                   </span>
                 </Link>
               </li>
+              {/* Resources Dropdown (Desktop) */}
+              <li
+                ref={resourcesDropdownRef}
+                className="relative block mx-4 my-0 xl:mx-2 xl:my-4"
+              >
+                <button
+                  className='flex items-center group px-0 pt-4 pb-3 w-full font-sans font-regular border-b border-white border-opacity-40 xl:hover:text-[#2e71ea] transition-colors xl:px-2 xl:py-0 xl:border-none xl:font-bold focus:outline-none'
+                  type='button'
+                  onClick={() => setResourcesDropdownOpen((open) => !open)}
+                  aria-expanded={resourcesDropdownOpen}
+                >
+                  <span>Resources</span>
+                  <svg className='ml-2 w-4 h-4' fill='none' stroke='currentColor' strokeWidth='2' viewBox='0 0 24 24'>
+                    <path strokeLinecap='round' strokeLinejoin='round' d='M19 9l-7 7-7-7' />
+                  </svg>
+                </button>
+                {resourcesDropdownOpen && (
+                  <div className='absolute left-0 mt-2 w-40 bg-black bg-opacity-90 rounded shadow-lg z-30'>
+                    <ul className='py-2 list-none'>
+                      <li>
+                        <Link href='/sermons' className='block px-4 py-2 hover:bg-[#2e71ea] hover:text-white transition-colors'>Sermons</Link>
+                      </li>
+                      <li>
+                        <Link href='/podcasts' className='block px-4 py-2 hover:bg-[#2e71ea] hover:text-white transition-colors'>Podcasts</Link>
+                      </li>
+                    </ul>
+                  </div>
+                )}
+              </li>
             </ul>
           </div>
 
           <div className='ml-auto mr-8'>
             <ul className='flex flex-wrap flex-col xl:flex-row xl:items-center list-none pl-0 my-0'>
-              {/* Sermons Link */}
-              <li className='block mx-4 my-0 xl:mx-2 xl:my-4'>
-                <Link
-                  className={`group px-0 pt-4 pb-3 flex items-center w-full font-sans font-regular border-b border-white border-opacity-40 xl:hover:text-coral transition-colors xl:inline xl:px-2 xl:py-0 xl:border-none ${pathname === '/sermons' ? 'text-coral' : ''
-                    } border-none mb-8 xl:mb-0`}
-                  href='/sermons'
-                >
-                  <span>Sermons</span>
-                  <span className='ml-auto mr-4 group-hover:mr-2 transition-margin xl:hidden'>
-                    <svg
-                      className='w-4 h-4'
-                      xmlns='http://www.w3.org/2000/svg'
-                      viewBox='0 0 23.6 18.2'
-                    >
-                      <path
-                        fill='currentColor'
-                        d='M23.6 9.138c0-.2-.1-.5-.3-.7l-7.7-8.1c-.4-.4-.9-.4-1.4 0-.4.3-.4 1 0 1.4l6.1 6.5H1c-.5 0-1 .4-1 1 0 .5.4 1 1 1h19.5l-6.1 6.5c-.3.4-.3 1 0 1.4.4.4 1 .3 1.4 0l7.7-8.1c.1-.5.1-.7.1-.9z'
-                      ></path>
-                    </svg>
-                  </span>
-                </Link>
-              </li>
-              {/* Podcasts Link */}
-              <li className='block mx-4 my-0 xl:mx-2 xl:my-4'>
-                <Link
-                  className={`group px-0 pt-4 pb-3 flex items-center w-full font-sans font-regular border-b border-white border-opacity-40 xl:hover:text-coral transition-colors xl:inline xl:px-2 xl:py-0 xl:border-none ${pathname === '/podcasts' ? 'text-coral' : ''
-                    } border-none mb-8 xl:mb-0`}
-                  href='/podcasts'
-                >
-                  <span>Podcasts</span>
-                  <span className='ml-auto mr-4 group-hover:mr-2 transition-margin xl:hidden'>
-                    <svg
-                      className='w-4 h-4'
-                      xmlns='http://www.w3.org/2000/svg'
-                      viewBox='0 0 23.6 18.2'
-                    >
-                      <path
-                        fill='currentColor'
-                        d='M23.6 9.138c0-.2-.1-.5-.3-.7l-7.7-8.1c-.4-.4-.9-.4-1.4 0-.4.3-.4 1 0 1.4l6.1 6.5H1c-.5 0-1 .4-1 1 0 .5.4 1 1 1h19.5l-6.1 6.5c-.3.4-.3 1 0 1.4.4.4 1 .3 1.4 0l7.7-8.1c.1-.5.1-.7.1-.9z'
-                      ></path>
-                    </svg>
-                  </span>
-                </Link>
-              </li>
+              {/* Contact button remains */}
               <li className='block mx-4 my-0 xl:mx-2 xl:my-4 xl:ml-4'>
                 <p>
                   <Link
@@ -264,7 +269,7 @@ export function Header({
               </li>
               <li className='block mx-4 my-0 xl:mx-2 xl:my-4'>
                 <Link
-                  className={`group px-0 pt-4 pb-3 flex items-center w-full font-sans font-regular border-b border-white border-opacity-40 xl:hover:text-coral transition-colors xl:inline xl:px-2 xl:py-0 xl:border-none  xl:font-bold ${pathname === '/who-we-are' ? 'text-coral' : ''
+                  className={`group px-0 pt-4 pb-3 flex items-center w-full font-sans font-regular border-b border-white border-opacity-40 xl:hover:text-[#2e71ea] transition-colors xl:inline xl:px-2 xl:py-0 xl:border-none  xl:font-bold ${pathname === '/who-we-are' ? 'text-[#2e71ea]' : ''
                     }`}
                   href='/who-we-are'
                 >
@@ -285,7 +290,7 @@ export function Header({
               </li>
               <li className='block mx-4 my-0 xl:mx-2 xl:my-4'>
                 <Link
-                  className={`group px-0 pt-4 pb-3 flex items-center w-full font-sans font-regular border-b border-white border-opacity-40 xl:hover:text-coral transition-colors xl:inline xl:px-2 xl:py-0 xl:border-none  xl:font-bold ${pathname === '/what-we-believe' ? 'text-coral' : ''
+                  className={`group px-0 pt-4 pb-3 flex items-center w-full font-sans font-regular border-b border-white border-opacity-40 xl:hover:text-[#2e71ea] transition-colors xl:inline xl:px-2 xl:py-0 xl:border-none  xl:font-bold ${pathname === '/what-we-believe' ? 'text-[#2e71ea]' : ''
                     }`}
                   href='/what-we-believe'
                 >
@@ -306,7 +311,7 @@ export function Header({
               </li>
               <li className='block mx-4 my-0 xl:mx-2 xl:my-4'>
                 <Link
-                  className={`group px-0 pt-4 pb-3 flex items-center w-full font-sans font-regular border-b border-white border-opacity-40 xl:hover:text-coral transition-colors xl:inline xl:px-2 xl:py-0 xl:border-none  xl:font-bold ${pathname === '/leadership' ? 'text-coral' : ''
+                  className={`group px-0 pt-4 pb-3 flex items-center w-full font-sans font-regular border-b border-white border-opacity-40 xl:hover:text-[#2e71ea] transition-colors xl:inline xl:px-2 xl:py-0 xl:border-none  xl:font-bold ${pathname === '/leadership' ? 'text-[#2e71ea]' : ''
                     }`}
                   href='/leadership'
                 >
@@ -325,51 +330,31 @@ export function Header({
                   </span>
                 </Link>
               </li>
-            </ul>
-            <ul className='flex flex-wrap flex-col xl:flex-row xl:items-center list-none pl-0 my-0'>
+              {/* Resources Dropdown (Mobile) */}
               <li className='block mx-4 my-0 xl:mx-2 xl:my-4'>
-                <Link
-                  className={`group px-0 pt-4 pb-3 flex items-center w-full font-sans font-regular border-b border-white border-opacity-40 xl:hover:text-coral transition-colors xl:inline xl:px-2 xl:py-0 xl:border-none  xl:font-bold ${pathname === '/sermons' ? 'text-coral' : ''
-                    }`}
-                  href='/sermons'
+                <button
+                  className='flex items-center group px-0 pt-4 pb-3 w-full font-sans font-regular border-b border-white border-opacity-40 xl:hover:text-[#2e71ea] transition-colors xl:px-2 xl:py-0 xl:border-none xl:font-bold focus:outline-none'
+                  type='button'
+                  onClick={() => setResourcesDropdownOpen((open) => !open)}
+                  aria-expanded={resourcesDropdownOpen}
                 >
-                  <span>Sermons</span>
-                  <span className='ml-auto mr-4 group-hover:mr-2 transition-margin xl:hidden'>
-                    <svg
-                      className='w-4 h-4'
-                      xmlns='http://www.w3.org/2000/svg'
-                      viewBox='0 0 23.6 18.2'
-                    >
-                      <path
-                        fill='currentColor'
-                        d='M23.6 9.138c0-.2-.1-.5-.3-.7l-7.7-8.1c-.4-.4-.9-.4-1.4 0-.4.3-.4 1 0 1.4l6.1 6.5H1c-.5 0-1 .4-1 1 0 .5.4 1 1 1h19.5l-6.1 6.5c-.3.4-.3 1 0 1.4.4.4 1 .3 1.4 0l7.7-8.1c.1-.5.1-.7.1-.9z'
-                      ></path>
-                    </svg>
-                  </span>
-                </Link>
+                  <span>Resources</span>
+                  <svg className={`ml-2 w-4 h-4 transform transition-transform ${resourcesDropdownOpen ? 'rotate-180' : ''}`} fill='none' stroke='currentColor' strokeWidth='2' viewBox='0 0 24 24'>
+                    <path strokeLinecap='round' strokeLinejoin='round' d='M19 9l-7 7-7-7' />
+                  </svg>
+                </button>
+                {resourcesDropdownOpen && (
+                  <ul className='pl-4 py-2 bg-black bg-opacity-80 rounded list-none'>
+                    <li>
+                      <Link href='/sermons' className='block px-4 py-2 hover:bg-[#2e71ea] hover:text-white transition-colors'>Sermons</Link>
+                    </li>
+                    <li>
+                      <Link href='/podcasts' className='block px-4 py-2 hover:bg-[#2e71ea] hover:text-white transition-colors'>Podcasts</Link>
+                    </li>
+                  </ul>
+                )}
               </li>
-              <li className='block mx-4 my-0 xl:mx-2 xl:my-4'>
-                <Link
-                  className={`group px-0 pt-4 pb-3 flex items-center w-full font-sans font-regular border-b border-white border-opacity-40 xl:hover:text-coral transition-colors xl:inline xl:px-2 xl:py-0 xl:border-none  xl:font-bold ${pathname === '/podcasts' ? 'text-coral' : ''
-                    }`}
-                  href='/podcasts'
-                >
-                  <span>Podcasts</span>
-                  <span className='ml-auto mr-4 group-hover:mr-2 transition-margin xl:hidden'>
-                    <svg
-                      className='w-4 h-4'
-                      xmlns='http://www.w3.org/2000/svg'
-                      viewBox='0 0 23.6 18.2'
-                    >
-                      <path
-                        fill='currentColor'
-                        d='M23.6 9.138c0-.2-.1-.5-.3-.7l-7.7-8.1c-.4-.4-.9-.4-1.4 0-.4.3-.4 1 0 1.4l6.1 6.5H1c-.5 0-1 .4-1 1 0 .5.4 1 1 1h19.5l-6.1 6.5c-.3.4-.3 1 0 1.4.4.4 1 .3 1.4 0l7.7-8.1c.1-.5.1-.7.1-.9z'
-                      ></path>
-                    </svg>
-                  </span>
-                </Link>
-              </li>
-
+              {/* Visit us button remains */}
               <li className='block mx-4 my-0 xl:mx-2 xl:my-4 xl:ml-4'>
                 <p>
                   <Link

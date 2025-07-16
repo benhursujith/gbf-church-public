@@ -1,37 +1,17 @@
-import { useWindowScroll } from '@uidotdev/usehooks';
-import { debounce } from 'lodash';
-import { ArrowUp } from 'lucide-react';
-import { useCallback } from 'react';
+import { MapPin } from 'lucide-react';
 
-interface ReturnToTopButtonProps {
-  delay?: number;
-  isOpen: boolean;
-}
-
-function useReturnToTop(delay = 50) {
-  const [{ y }, scrollTo] = useWindowScroll();
-  const debouncedScrollTo = debounce(scrollTo, delay);
-  const handleClick = useCallback(() => {
-    debouncedScrollTo({ left: 0, top: 0, behavior: 'smooth' });
-  }, [debouncedScrollTo]);
-
-  return { y, handleClick };
-}
-
-function ScrollToTopButton({ delay, isOpen }: ReturnToTopButtonProps) {
-  const { y, handleClick } = useReturnToTop(delay);
-
+function StickyMapButton() {
   return (
-    <button
-      onClick={handleClick}
-      aria-label='scroll to top'
-      className={`${y === 0 ? 'scale-0' : 'scale-100'} 
-      ${isOpen ? 'hidden' : ''}
-      
-      w-12 h-12 transition-transform duration-200 flex fixed right-10 bottom-10 bg-[#2D71EA] rounded-full shadow-lg shadow-gray-900 justify-center items-center z-50`}
+    <a
+      href="https://g.co/kgs/9XuLd9o"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Open church location in Google Maps"
+      className="w-12 h-12 flex fixed right-10 bottom-10 bg-[#2D71EA] rounded-full shadow-lg shadow-gray-900 justify-center items-center z-50 hover:bg-blue-700 transition-colors"
     >
-      <ArrowUp className='w-6 h-6' />
-    </button>
+      <MapPin className="w-6 h-6 text-white" />
+    </a>
   );
 }
-export default ScrollToTopButton;
+
+export default StickyMapButton;

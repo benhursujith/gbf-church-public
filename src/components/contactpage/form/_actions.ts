@@ -16,7 +16,7 @@ export async function sendEmail(data: ContactFormInputs) {
     const { name, email, message } = result.data;
     try {
       const data = await resend.emails.send({
-        from: 'Calvary Bible Fellowship. <reachout@cbf-church.org>',
+        from: 'Grace Bible Fellowship <gracebiblefellowship.blr@gmail.com>',
         to: ['cbfmember001@gmail.com'],
         subject: 'Contact form submission',
         text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,

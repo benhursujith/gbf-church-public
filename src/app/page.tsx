@@ -27,9 +27,8 @@ export default function HomePage() {
       <ChurchLocation />
       {/* Trending Podcasts */}
       <TrendingPodcasts />
-
       {/* Other pages links */}
-      <OtherPages data1={otherPages[3]} data2={otherPages[4]} />
+      <OtherPages data1={otherPages[0]} data2={otherPages[1]} />
     </PageLayout>
   );
 }

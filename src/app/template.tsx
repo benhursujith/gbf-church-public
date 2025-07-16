@@ -50,7 +50,7 @@ function Transition() {
         }}
       />
       <motion.div
-        className='fixed top-0 bottom-0 right-full w-screen h-screen z-20 bg-coral'
+        className='fixed top-0 bottom-0 right-full w-screen h-screen z-20 bg-[#2e71ea]'
         variants={transitionVariants}
         initial='initial'
         animate='animate'

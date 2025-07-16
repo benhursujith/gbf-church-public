@@ -349,7 +349,7 @@ select {
 
 .bg-coral {
   --tw-bg-opacity: 1;
-  background-color: #2D71EA;
+  background-color: #F56D6E;
 }
 
 .bg-red {
@@ -369,7 +369,7 @@ select {
 
 .hover\:bg-coral:hover {
   --tw-bg-opacity: 1;
-  background-color: #2D71EA;
+  background-color: #F56D6E;
 }
 
 .bg-opacity-75 {
@@ -3720,4 +3720,15 @@ ul {
   z-index: 3;
   transform: translateX(-50%);
   text-align: center;
+}
+
+/* Link hover/focus states */
+a:hover, a:focus {
+  color: #2e71ea;
+}
+
+/* Text selection */
+::selection {
+  background: #2e71ea;
+  color: #fff;
 }

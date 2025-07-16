@@ -14,9 +14,9 @@ export function Footer() {
   return (
     <footer className='bg-gray-400 text-black headline-defaults copy-defaults relative z-10'>
       <div className='wrapper relative z-10'>
-        <div className='flex flex-wrap py-8 md:pt-16 md:pb-24'>
+        <div className='flex flex-wrap md:flex-nowrap items-start justify-between py-8 md:pt-16 md:pb-24 px-4'>
           {/* Logo */}
-          <div className='w-full xl:w-2/5 px-4'>
+          <div className='w-full md:w-1/3 xl:w-1/3 flex justify-center mb-8 md:mb-0'>
             <Image
               data-loaded='false'
               onLoad={(event) => {
@@ -31,60 +31,37 @@ export function Footer() {
             />
           </div>
           {/* links */}
-          <div className='w-full xl:w-3/5'>
-            <div className='flex flex-wrap'>
-              <div className='w-1/2 md:w-1/3 px-4'>
-                <p className='subhead'>
-                  <span className='hover:underline'>About Us</span>
-                </p>
-                <ul className='list-none pl-0 font-sans xl:mt-8'>
-                  {footerAboutLinks.map(
-                    ({ title, link }: any, index: Key | null | undefined) => (
-                      <li key={index} className='pr-4'>
-                        <Link
-                          className='hover:underline hover:text-coral'
-                          href={link}
-                        >
-                          {title}
-                        </Link>
-                      </li>
-                    )
-                  )}
-                </ul>
-              </div>
-              <div className='w-1/2 md:w-1/3 px-4'>
-                <p className='subhead'>
-                  <span className='hover:underline'>Quick Links</span>
-                </p>
-                <ul className='list-none pl-0 font-sans xl:mt-8'>
-                  {footerQuickLinks.map(
-                    ({ title, link }: any, index: Key | null | undefined) => (
-                      <li key={index} className='pr-4'>
-                        <Link
-                          className='hover:underline hover:text-coral'
-                          href={link}
-                        >
-                          {title}
-                        </Link>
-                      </li>
-                    )
-                  )}
-                </ul>
-              </div>
-              <div className='w-1/2 md:w-1/3 px-4'>
-                <p className='subhead'>{siteConfig.questions}</p>
-                <ul className='list-none pl-0 font-sans xl:mt-8'>
-                  <li className='pr-4'>
-                    <Link
-                      className='hover:underline hover:text-coral font-bold'
-                      href={`mailto:${siteConfig.email}`}
-                    >
-                      {siteConfig.email}
-                    </Link>
+          <div className='w-full md:w-1/3 xl:w-1/3 flex flex-col items-start'>
+            <p className='subhead mb-2'><span className='hover:underline'>About Us</span></p>
+            <div className='flex w-full'>
+              <ul className='list-none pl-0 font-sans xl:mt-4 w-1/2'>
+                {footerAboutLinks.slice(0, 2).map(({ title, link }: any, index: Key | null | undefined) => (
+                  <li key={index} className='pr-4 mb-1'>
+                    <Link className='hover:underline hover:text-[#2e71ea]' href={link}>{title}</Link>
                   </li>
-                </ul>
-              </div>
+                ))}
+              </ul>
+              <ul className='list-none pl-0 font-sans xl:mt-4 w-1/2'>
+                {footerAboutLinks.slice(2, 4).map(({ title, link }: any, index: Key | null | undefined) => (
+                  <li key={index} className='pr-4 mb-1'>
+                    <Link className='hover:underline hover:text-[#2e71ea]' href={link}>{title}</Link>
+                  </li>
+                ))}
+              </ul>
             </div>
+          </div>
+          <div className='w-full md:w-1/3 xl:w-1/3 flex flex-col items-start mt-8 md:mt-0'>
+            <p className='subhead mb-2'>{siteConfig.questions}</p>
+            <ul className='list-none pl-0 font-sans xl:mt-4'>
+              <li className='pr-4'>
+                <Link
+                  className='hover:underline hover:text-[#2e71ea] font-bold'
+                  href={`mailto:${siteConfig.email}`}
+                >
+                  {siteConfig.email}
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
         {/* Social */}
@@ -102,7 +79,7 @@ export function Footer() {
           ))}
         </div>
       </div>
-      <div className='border-t border-gray-800 relative z-20'>
+      <div className='relative z-20'>
         <div className='wrapper'>
           <div className='flex flex-wrap px-4 xl:py-4 xl:items-center'>
             <div className='w-full xl:flex-1 flex flex-col md:flex-row md:flex-wrap md:items-center md:justify-between -mb-4 xl:-mb-0 relative z-20'>

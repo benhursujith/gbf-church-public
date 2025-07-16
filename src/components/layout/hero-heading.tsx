@@ -45,18 +45,20 @@ export function HeroHeading({ data }: HeroProps) {
               className='relative z-10 w-full md:w-3/4 ml-auto mr-0 md:mr-4 rellax rellax-reverse'
               style={{ transform: 'translate3d(0px, -33px, 0px)' }}
             >
-              <Image
-                data-loaded='false'
-                onLoad={(event) => {
-                  event.currentTarget.setAttribute('data-loaded', 'true');
-                }}
-                className='relative lazyloaded data-[loaded=false]:animate-pulse data-[loaded=false]:bg-gray-100/10'
-                width='1300'
-                height='745'
-                alt={title}
-                src={image}
-                sizes='100vw'
-              />
+              {(typeof image === 'string' && (image.startsWith('/') || image.startsWith('http'))) && (
+                <Image
+                  data-loaded='false'
+                  onLoad={(event) => {
+                    event.currentTarget.setAttribute('data-loaded', 'true');
+                  }}
+                  className='relative lazyloaded data-[loaded=false]:animate-pulse data-[loaded=false]:bg-gray-100/10'
+                  width='1300'
+                  height='745'
+                  alt={title}
+                  src={image}
+                  sizes='100vw'
+                />
+              )}
             </div>
           </div>
         </div>
@@ -84,17 +86,19 @@ export function AlternateHeroHeading({ data }: AlternativeHeroProps) {
                   'translate3d(0px, 0px, 0px) translate3d(0px, 0px, 0px)',
               }}
             >
-              <Image
-                data-loaded='false'
-                onLoad={(event) => {
-                  event.currentTarget.setAttribute('data-loaded', 'true');
-                }}
-                className='relative data-[loaded=false]:animate-pulse data-[loaded=false]:bg-gray-100/10'
-                src={image}
-                width='1984'
-                height='380'
-                alt={title}
-              />
+              {(typeof image === 'string' && (image.startsWith('/') || image.startsWith('http'))) && (
+                <Image
+                  data-loaded='false'
+                  onLoad={(event) => {
+                    event.currentTarget.setAttribute('data-loaded', 'true');
+                  }}
+                  className='relative data-[loaded=false]:animate-pulse data-[loaded=false]:bg-gray-100/10'
+                  src={image}
+                  width='1984'
+                  height='380'
+                  alt={title}
+                />
+              )}
             </div>
             <div className='my-8 md:my-16 text-base sm:text-lg md:text-xl max-w-2xl mx-auto'>
               <p>{description}</p>

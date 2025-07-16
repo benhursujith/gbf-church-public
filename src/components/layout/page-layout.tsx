@@ -3,7 +3,7 @@ import { ToastContainer } from 'react-toastify';
 
 import { Footer } from '@/components/layout/footer';
 import { Header } from '@/components/layout/header';
-import ScrollToTopButton from '@/components/ui/scroll-to-top-button';
+import StickyMapButton from '@/components/ui/scroll-to-top-button';
 
 export function PageLayout({ children }: { children: React.ReactNode }) {
   // Mobile Menu Toggle functionality
@@ -18,7 +18,7 @@ export function PageLayout({ children }: { children: React.ReactNode }) {
           {children}
         </main>
         <Footer />
-        <ScrollToTopButton isOpen={isOpen} />
+        <StickyMapButton />
         <ToastContainer />
       </div>
     </>

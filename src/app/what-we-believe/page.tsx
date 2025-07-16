@@ -16,7 +16,6 @@ export default function BeliefsPage() {
       {/* Heading */}
       <HeroHeading data={whatWeBelieveHero} />
       <WhatWeBelieve />
-      <WhatWeDo />
       <CareGroups />
       {/* Other pages links */}
       <OtherPages data1={otherPages[2]} data2={otherPages[0]} />

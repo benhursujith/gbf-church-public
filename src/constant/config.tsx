@@ -1,11 +1,11 @@
-import { Podcast, Rss, Youtube } from 'lucide-react';
+import { Podcast, Rss, Youtube, Instagram } from 'lucide-react';
 import Link from 'next/link';
 
 export const siteConfig = {
   title: 'Grace Bible Fellowship',
   description: 'Salt And Light',
   url: 'https://cbf-church.org',
-  email: 'reachout@cbf-church.org',
+  email: 'gracebiblefellowship.blr@gmail.com',
   questions: 'Have Questions? Please reach us at',
 };
 
@@ -19,20 +19,20 @@ export const homepageHero = {
 
 export const homepageLatestSermon = {
   title: 'Watch the latest sermon',
-  subtitle: 'Check it out',
+  subtitle: 'View all sermons',
   description:
-    'Dive into our latest sermon experience. Watch below and explore more series on our YouTube channel. Join us on this spiritual journey of faith and inspiration.',
+    'Join us on this spiritual journey of faith and inspiration. Watch our latest sermons here and explore more on our YouTube & Spotify channels.',
   link: '/sermons#latest-sermon',
 };
 
 export const homepageChurchLocation = {
-  title: 'Sunday Gathering Location',
-  subtitle: 'Join us every Sunday at 8:45 AM IST',
+  title: 'Sunday Worship Service',
+  subtitle: 'Join us every Sunday at 9:45 AM IST',
   description:
-    ' World Cassette Outreach of India (WCOI)90, Osborne Rd, near Lake Side Hospital, Hermit Colony, Sivanchetti Gardens, Bengaluru, Karnataka 560042',
-  link: '/contact-us',
+    'Christ university back gate (4) 1st Main Rd, near CBS ATM, Tavarekere, Bhavani Nagar, S.G. Palya, Bengaluru, Karnataka 560029',
+  link: 'https://maps.app.goo.gl/tM9nLGLn4k2NS2aFA',
   image: '/images/chair.jpg',
-  linkText: 'Learn more',
+  linkText: 'View on maps',
 };
 
 export const homepageTrendingPodcasts = {
@@ -174,11 +174,11 @@ export const contactUsContent = {
   description:
     'Our Contact Us page is a dedicated platform for users to reach out and connect with us. Whether you have questions, feedback, or need support, we`re here to listen and assist you.',
   image: '/images/contact.jpg',
-  location: 'https://maps.app.goo.gl/FJJRHXKRXoFJGJPN7',
-  addressHeading: 'Sunday Gathering Location',
+  location: 'https://maps.app.goo.gl/tM9nLGLn4k2NS2aFA',
+  addressHeading: 'Sunday Worship Service',
   addressTitle: 'Grace Bible Fellowship',
   address:
-    ' 90, Osborne Rd, near Lake Side Hospital, Hermit Colony, Sivanchetti Gardens, Bengaluru, Karnataka 560042',
+    'Christ university back gate (4) 1st Main Rd, near CBS ATM, Tavarekere, Bhavani Nagar, S.G. Palya, Bengaluru, Karnataka 560029',
   addressImage: '/images/jest.jpg',
   disclaimer:
     'When filling out this form, we kindly request that you respect the content provided. Once your information is received, we will promptly respond to your request. Your message is valuable to us, and we appreciate your cooperation and understanding.',
@@ -376,16 +376,16 @@ export const footerAboutLinks = [
 
 export const footerSocialLinks = [
   {
-    link: 'https://www.youtube.com/channel/UCE0ODfrD_TjdTySfNv9ggeQ',
+    link: 'https://www.youtube.com/@grace.biblefellowship',
     component: <Youtube />,
   },
   {
-    link: 'https://open.spotify.com/show/07dGkNxqaELnimZKlfqtBY',
+    link: 'https://open.spotify.com/show/532PwUNiFxZNYK0faT8hg9?si=7160ad41bcfd49d8',
     component: <Rss />,
   },
   {
-    link: 'https://podcasts.apple.com/in/podcast/calvary-bible-fellowship-bangalore/id1528884061',
-    component: <Podcast />,
+    link: 'https://www.instagram.com/gracebiblefellowship_bangalore?utm_source=ig_web_button_share_sheet&igsh=cWwxMXNrb2h4YmFo',
+    component: <Instagram />,
   },
 ];
 
@@ -498,7 +498,7 @@ export const aboutMenuSection = {
 export const connectMenuSection = {
   title: 'Listen, Learn, Apply',
   description:
-    'Explore a plethora of sermon series that delve into various biblical themes, providing comprehensive insights into spiritual growth and understanding..',
+    'Explore a plethora of sermon series that delve into various biblical themes, providing comprehensive insights into spiritual understanding and practical application.',
 };
 
 export const sermonPageSermons = [
