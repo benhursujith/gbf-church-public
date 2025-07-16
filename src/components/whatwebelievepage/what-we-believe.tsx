@@ -82,21 +82,21 @@ export function WhatWeBelieve() {
         color='black'
       />
       <section className='relative z-10 overflow-hidden bg-black text-white'>
-        <div className='wrapper relative z-20 animate-in effect-fade-in entered '>
-          <div className='pt-16 md:pt-24 pb-16 md:pb-24'>
+        <div className='wrapper relative z-20 animate-in effect-fade-in entered'>
+          <div className='pt-2 md:pt-4 pb-2 md:pb-4'>
             <Tabs defaultValue={tabList[0]} onValueChange={setActiveTab}>
               {/* Tab buttons */}
-              <div className='carousel-custom-nav flex justify-center  mb-[8rem] mt-[8rem] px-4'>
-                <TabsList className='flex-col md:flex-row'>
+              <div className='carousel-custom-nav flex justify-center mb-2 mt-2 px-4'>
+                <TabsList className='w-full flex-row custom-belief-tabs'>
                   {tabList.map((tab: any, i: number) => (
                     <TabsTrigger
                       key={i}
                       value={tab}
-                      className={`btn cursor-pointer -ml-px
-                          
-                          ${i === activeTabIndex ? ' is-selected' : ' '}  `}
+                      className={`custom-belief-tab px-6 py-3 font-bold text-base transition-all duration-200
+                        ${i === activeTabIndex ? 'selected' : ''}
+                      `}
                     >
-                      <span> {ourBeliefs[tab].title}</span>
+                      <span>{ourBeliefs[tab].title}</span>
                     </TabsTrigger>
                   ))}
                 </TabsList>

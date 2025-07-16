@@ -64,9 +64,9 @@ export function PodcastsList() {
                             />
                           )}
 
-                          <h3>{podcast.title}</h3>
+                          <h3 className="text-white">{podcast.title}</h3>
                           <div className='max-w-2xl mb-4 md:text-lg'>
-                            <p>{podcast.description}</p>
+                            <p className="text-white">{podcast.description}</p>
                           </div>
                           <div className='border-t border-gray-600 flex items-center mt-auto mb-0 py-2'>
                             <span className='font-sans font-bold'>

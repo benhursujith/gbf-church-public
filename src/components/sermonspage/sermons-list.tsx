@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
+import { Search, Filter } from 'lucide-react';
 import { SubHeading } from '@/components/layout/sub-heading';
 import { sermonPageHero } from '@/constant/config';
 import { fetchSermonsFromSheet } from '@/utils/fetch-sermons-from-sheet';
@@ -68,26 +68,152 @@ export function SermonsList() {
           description={sermonPageHero.sermonSeriesDescription}
           color='black'
         />
-        <div className='max-w-2xl mx-auto my-6 flex flex-col md:flex-row md:items-center gap-4'>
-          <input
-            type='text'
-            placeholder='Search sermons...'
-            className='flex-1 px-4 py-2 border border-gray-200 rounded-lg bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-200 text-black shadow-sm transition'
-            value={search}
-            onChange={e => setSearch(e.target.value)}
-          />
-          <select
-            className='px-3 py-2 border border-gray-200 rounded-lg bg-gray-50 text-black shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-200 transition'
-            value={series}
-            onChange={e => setSeries(e.target.value)}
-          >
-            <option value='All'>All Series</option>
-            {allSeries.map((s) => (
-              <option key={s} value={s}>{s}</option>
-            ))}
-          </select>
+        <div className="sermon-filter-container">
+          <div className="search-box search-underline">
+            <Search className="icon" size={20} />
+            <input
+              type="text"
+              value={search}
+              onChange={e => setSearch(e.target.value)}
+              placeholder="Search sermons..."
+              className="search-input-underline"
+              style={{ boxShadow: 'none' }}
+            />
+          </div>
+          <div className="dropdown-box dropdown-navbar-style">
+            <div className="dropdown-wrapper navbar-dropdown">
+              <select value={series} onChange={e => setSeries(e.target.value)} className="dropdown-select-navbar" style={{ boxShadow: 'none' }}>
+                <option value="All">All Series</option>
+                {allSeries.map((s) => (
+                  <option key={s} value={s}>{s}</option>
+                ))}
+              </select>
+              <span className="chevron">▼</span>
+            </div>
+          </div>
         </div>
         <div className='py-12'><span className='block text-center'>No sermons found.</span></div>
+        <style jsx global>{`
+          .sermon-filter-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            justify-content: center;
+            align-items: center;
+          }
+          .search-box {
+            display: flex;
+            align-items: center;
+            background: none;
+            border-radius: 0;
+            border: none;
+            box-shadow: none;
+            padding: 0;
+          }
+          .search-underline {
+            border-bottom: 2px solid #aaa !important;
+            padding-bottom: 0.2rem;
+            width: 340px;
+            background: none;
+          }
+          .search-input-underline {
+            background: transparent;
+            border: none;
+            color: #fff;
+            font-size: 1.2rem;
+            margin-left: 0.5rem;
+            outline: none;
+            width: 300px;
+            padding: 0.2rem 0;
+            box-shadow: none !important;
+          }
+          .search-input-underline:focus,
+          .search-input-underline:active,
+          .search-input-underline:focus-visible,
+          .search-input-underline:focus-within,
+          input[type="text"]:focus,
+          input[type="text"]:focus-visible,
+          input[type="text"]:active,
+          input[type="text"]:focus-within {
+            outline: none !important;
+            box-shadow: none !important;
+            border: none !important;
+            background: transparent !important;
+            border-color: #aaa !important;
+            appearance: none !important;
+            caret-color: #fff;
+          }
+          input[type="text"]::-webkit-input-placeholder { color: #aaa; }
+          input[type="text"]::-moz-placeholder { color: #aaa; }
+          input[type="text"]:-ms-input-placeholder { color: #aaa; }
+          input[type="text"]::placeholder { color: #aaa; }
+          .dropdown-box {
+            display: flex;
+            align-items: center;
+            background: none;
+            border-radius: 0;
+            border: none;
+            box-shadow: none;
+            padding: 0;
+          }
+          .dropdown-navbar-style .dropdown-wrapper.navbar-dropdown {
+            position: relative;
+            display: flex;
+            align-items: center;
+            background: rgba(24,24,24,0.85);
+            border-radius: 8px;
+            border: 1.5px solid #aaa;
+            padding: 0.2rem 1.5rem 0.2rem 0.8rem;
+            min-width: 180px;
+            box-shadow: none;
+          }
+          .dropdown-navbar-style .dropdown-select-navbar {
+            background: transparent;
+            border: none;
+            color: #fff;
+            font-size: 1rem;
+            outline: none;
+            width: 100%;
+            appearance: none;
+            padding-right: 1.5rem;
+            cursor: pointer;
+            box-shadow: none !important;
+            font-family: inherit;
+            font-weight: 500;
+            letter-spacing: 0.01em;
+          }
+          .dropdown-navbar-style .dropdown-select-navbar option {
+            background: rgba(24,24,24,0.95);
+            color: #fff;
+            font-family: inherit;
+            font-size: 1rem;
+            border-radius: 8px;
+            padding: 0.5rem 1rem;
+          }
+          .dropdown-navbar-style .chevron {
+            position: absolute;
+            right: 0.7rem;
+            pointer-events: none;
+            color: #aaa;
+            font-size: 1rem;
+          }
+          .icon {
+            color: #aaa;
+          }
+          .dropdown-navbar-style .dropdown-wrapper:focus-within,
+          .dropdown-navbar-style .dropdown-wrapper:hover {
+            border-color: #aaa;
+            box-shadow: none;
+          }
+          .dropdown-navbar-style .dropdown-select-navbar:focus,
+          .dropdown-navbar-style .dropdown-select-navbar:active {
+            color: #fff;
+            outline: none !important;
+            box-shadow: none !important;
+            border: none !important;
+          }
+        `}</style>
       </>
     );
   }
@@ -100,25 +226,122 @@ export function SermonsList() {
         description={sermonPageHero.sermonSeriesDescription}
         color='black'
       />
-      <div className='max-w-2xl mx-auto my-6 flex flex-col md:flex-row md:items-center gap-4'>
-        <input
-          type='text'
-          placeholder='Search sermons...'
-          className='flex-1 px-4 py-2 border border-gray-200 rounded-lg bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-200 text-black shadow-sm transition'
-          value={search}
-          onChange={e => setSearch(e.target.value)}
-        />
-        <select
-          className='px-3 py-2 border border-gray-200 rounded-lg bg-gray-50 text-black shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-200 transition'
-          value={series}
-          onChange={e => setSeries(e.target.value)}
-        >
-          <option value='All'>All Series</option>
-          {allSeries.map((s) => (
-            <option key={s} value={s}>{s}</option>
-          ))}
-        </select>
+      <div className="sermon-filter-container">
+        <div className="search-box search-underline">
+          <Search className="icon" size={20} />
+          <input
+            type="text"
+            value={search}
+            onChange={e => setSearch(e.target.value)}
+            placeholder="Search sermons..."
+            className="search-input-underline"
+            style={{ boxShadow: 'none' }}
+          />
+        </div>
+        <div className="dropdown-box dropdown-navbar-style">
+          <div className="dropdown-wrapper navbar-dropdown">
+            <select value={series} onChange={e => setSeries(e.target.value)} className="dropdown-select-navbar" style={{ boxShadow: 'none' }}>
+              <option value="All">All Series</option>
+              {allSeries.map((s) => (
+                <option key={s} value={s}>{s}</option>
+              ))}
+            </select>
+            <span className="chevron">▼</span>
+          </div>
+        </div>
       </div>
+      <style jsx global>{`
+        .sermon-filter-container {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 1.5rem;
+          margin-top: 2rem;
+          justify-content: center;
+          align-items: center;
+        }
+        .search-box {
+          display: flex;
+          align-items: center;
+          background: none;
+          border-radius: 0;
+          border: none;
+          box-shadow: none;
+          padding: 0;
+        }
+        .search-underline {
+          border-bottom: 2px solid #aaa !important;
+          padding-bottom: 0.2rem;
+          width: 340px;
+          background: none;
+        }
+        .search-input-underline {
+          background: transparent;
+          border: none;
+          color: #fff;
+          font-size: 1.2rem;
+          margin-left: 0.5rem;
+          outline: none;
+          width: 300px;
+          padding: 0.2rem 0;
+        }
+        .search-input-underline::placeholder {
+          color: #aaa;
+          opacity: 1;
+        }
+        .dropdown-box {
+          display: flex;
+          align-items: center;
+          background: none;
+          border-radius: 0;
+          border: none;
+          box-shadow: none;
+          padding: 0;
+        }
+        .dropdown-navbar-style .dropdown-wrapper {
+          position: relative;
+          display: flex;
+          align-items: center;
+          background: #181818;
+          border-radius: 8px;
+          border: 1px solid #222;
+          padding: 0.2rem 1.5rem 0.2rem 0.8rem;
+          min-width: 180px;
+        }
+        .dropdown-navbar-style .dropdown-select-navbar {
+          background: transparent;
+          border: none;
+          color: #fff;
+          font-size: 1rem;
+          outline: none;
+          width: 100%;
+          appearance: none;
+          padding-right: 1.5rem;
+          cursor: pointer;
+        }
+        .dropdown-navbar-style .dropdown-select-navbar option {
+          background: #222;
+          color: #fff;
+        }
+        .dropdown-navbar-style .chevron {
+          position: absolute;
+          right: 0.7rem;
+          pointer-events: none;
+          color: #aaa;
+          font-size: 1rem;
+        }
+        .icon {
+          color: #aaa;
+        }
+        .dropdown-navbar-style .dropdown-wrapper:focus-within,
+        .dropdown-navbar-style .dropdown-wrapper:hover {
+          border-color: #222;
+        }
+        .dropdown-navbar-style .dropdown-select-navbar:focus {
+          color: #fff;
+          outline: none;
+          box-shadow: none !important;
+        }
+      `}</style>
       <section className='relative z-10 overflow-hidden bg-black text-white'>
         <div className='wrapper relative z-20 animate-in effect-fade-in entered'>
           <div className='pt-8 md:pt-12 pb-8 md:pb-12'>

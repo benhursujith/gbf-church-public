@@ -58,17 +58,17 @@ export function CareGroups() {
           <div className='pt-16 md:pt-24 pb-16 md:pb-24'>
             <Tabs defaultValue={tabList[0]} onValueChange={setActiveTab}>
               {/* Tab buttons */}
-              <div className='carousel-custom-nav flex justify-center  mb-[8rem] mt-[8rem] px-4'>
-                <TabsList className='flex-col md:flex-row'>
+              <div className='carousel-custom-nav flex justify-center mb-4 mt-4 px-4'>
+                <TabsList className='w-full flex-row custom-caregroup-tabs'>
                   {tabList.map((tab: any, i: number) => (
                     <TabsTrigger
                       key={i}
                       value={tab}
-                      className={`btn cursor-pointer -ml-px
-                          
-                          ${i === activeTabIndex ? ' is-selected' : ' '}  `}
+                      className={`custom-caregroup-tab px-6 py-3 font-bold text-base transition-all duration-200
+                        ${i === activeTabIndex ? 'selected' : ''}
+                      `}
                     >
-                      <span> {careGroups[tab].title}</span>
+                      <span>{careGroups[tab].title}</span>
                     </TabsTrigger>
                   ))}
                 </TabsList>

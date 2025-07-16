@@ -98,9 +98,6 @@ export const whatWeBelieveHero = {
   whatWeDoTitle: 'What We Do',
   whatWeDoDescription:
     'We are committed to being a family made up of different generations, backgrounds, ethnicities and abilities. Unity in the midst of diversity is a big part of God`s Kingdom, and one we celebrate.',
-  whatWeBelieveTitle: 'Mission Statement',
-  whatWeBelieveDescription:
-    'This is our mission statement from when Grace Bible Fellowship was formed. It still represents what we think matters most.',
   careGroupTitle: 'Care Group Schedule',
   careGroupDescription:
     'Care groups provide a sense of family, deepen prayer life, offer support in crisis, facilitate sharing the faith, develop leadership, and enhance worship, aligning with the New Testament model of Christian community.',
@@ -111,7 +108,7 @@ export const leadershipPageHero = {
   title: 'Meet Our',
   subtitle: 'Leaders.',
   description:
-    'Welcome to our church leadership page. Here, you`ll find a dedicated team committed to serving our congregation, fostering spiritual growth, and supporting our community. Join us!',
+    'Welcome to our church leadership page. Here, you`ll find a dedicated team committed to serving our congregation, fostering spiritual growth, and supporting our community.',
   image: '/images/leadership.jpg',
   eldersTitle: 'Meet Our Elders',
   eldersDescription:
@@ -163,7 +160,7 @@ export const leadershipDeacons = [
   {
     name: 'Nithin Philip',
     title: 'DEACON',
-    image: '/images/Nithin.png',
+    image: '/images/nithin.png',
   },
 ];
 
@@ -1002,12 +999,11 @@ export const timelineItems = [
       },
       type: 'IMAGE',
     },
-
     cardDetailedText: `Our story began when a few believers were burdened for professionals and students coming to Bangalore who needed a church where they felt comfortable, a gathering open to those seeking answers regarding their faith, and where they felt secure bringing their friends.`,
   },
   {
-    title: '2002',
-    cardTitle: 'The First Step',
+    title: '2022',
+    cardTitle: 'Our beginnings - The church plant',
     media: {
       name: 'first-step',
       source: {
@@ -1015,12 +1011,11 @@ export const timelineItems = [
       },
       type: 'IMAGE',
     },
-
     cardDetailedText: `With this vision in mind, these believers began gathering in the aerobics room of a gym in Domlur on Airport Road. Eventually as the gathering grew, they named the church, appropriately, 'Airport Road Fellowship'. As the new church grew in the Lord and in numbers, God provided for their every need and blessed the young group.`,
   },
   {
-    title: '2009',
-    cardTitle: 'A Move And A New Name',
+    title: '2025',
+    cardTitle: 'Today',
     media: {
       name: 'second-step',
       source: {
@@ -1028,46 +1023,42 @@ export const timelineItems = [
       },
       type: 'IMAGE',
     },
-
     cardDetailedText: `By April 2009, Airport Road Fellowship had outgrown the gymnasium. With extraordinary timing, the Ashirvad auditorium in St. Joseph's Jesuit Seminary on St. Mark's Road became available and the church moved their meetings there. With the name "Airport Road Fellowship" now out of date, the church was renamed 'Calvary Bible Fellowship' (CBF).`,
   },
-  {
-    title: '2017',
-    cardTitle: 'And Another Move!',
-    media: {
-      name: 'third-step',
-      source: {
-        url: '/images/wcoi-step.jpg',
-      },
-      type: 'IMAGE',
-    },
-
-    cardDetailedText: `Eventually, CBF was blessed with more members and moved to "World Cassette Outreach of India" on Osborne Road.`,
-  },
-  {
-    title: '2022',
-    cardTitle: 'Church Plant',
-    media: {
-      name: 'plant',
-      source: {
-        url: '/images/plant.jpg',
-      },
-      type: 'IMAGE',
-    },
-
-    cardDetailedText: `In 2022, the church had significantly grown in numbers. To meet the discipleship needs of it's members and to serve college-going students, Grace Bible Fellowship prayerfully planted Grace Bible Fellowship within Christ University's Koramangala campus.`,
-  },
-  {
-    title: '2024',
-    cardTitle: 'Today',
-    media: {
-      name: 'fourth-step',
-      source: {
-        url: '/images/fourth-step.jpg',
-      },
-      type: 'IMAGE',
-    },
-
-    cardDetailedText: `Today, CBF is a growing and diverse congregation of all ages and backgrounds. In addition to Sunday worship meetings at World Cassette Outreach of India (WCOI), CBF conducts regular Bible studies, prayer meetings and a number of care cells throughout the week to help believers grow spiritually and build deep and lasting relationships with each other. The church is also involved with missions and social outreach in Bangalore and across India. The members of CBF continue to support the mission of the church as God adds chapter after chapter to our continuing story.`,
-  },
+  // {
+  //   title: '2017',
+  //   cardTitle: 'And Another Move!',
+  //   media: {
+  //     name: 'third-step',
+  //     source: {
+  //       url: '/images/wcoi-step.jpg',
+  //     },
+  //     type: 'IMAGE',
+  //   },
+  //   cardDetailedText: `Eventually, CBF was blessed with more members and moved to "World Cassette Outreach of India" on Osborne Road.`,
+  // },
+  // {
+  //   title: '2022',
+  //   cardTitle: 'Church Plant',
+  //   media: {
+  //     name: 'plant',
+  //     source: {
+  //       url: '/images/plant.jpg',
+  //     },
+  //     type: 'IMAGE',
+  //   },
+  //   cardDetailedText: `In 2022, the church had significantly grown in numbers. To meet the discipleship needs of it's members and to serve college-going students, Grace Bible Fellowship prayerfully planted Grace Bible Fellowship within Christ University's Koramangala campus.`,
+  // },
+  // {
+  //   title: '2024',
+  //   cardTitle: 'Today',
+  //   media: {
+  //     name: 'fourth-step',
+  //     source: {
+  //       url: '/images/fourth-step.jpg',
+  //     },
+  //     type: 'IMAGE',
+  //   },
+  //   cardDetailedText: `Today, CBF is a growing and diverse congregation of all ages and backgrounds. In addition to Sunday worship meetings at World Cassette Outreach of India (WCOI), CBF conducts regular Bible studies, prayer meetings and a number of care cells throughout the week to help believers grow spiritually and build deep and lasting relationships with each other. The church is also involved with missions and social outreach in Bangalore and across India. The members of CBF continue to support the mission of the church as God adds chapter after chapter to our continuing story.`,
+  // },
 ];

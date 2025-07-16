@@ -3732,3 +3732,90 @@ a:hover, a:focus {
   background: #2e71ea;
   color: #fff;
 }
+
+/* --- Custom Belief Tabs Styles --- */
+.custom-belief-tabs {
+  background: transparent;
+  border-bottom: 1.5px solid #444;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 0;
+  margin: 0 auto;
+  padding: 0;
+}
+.custom-belief-tab {
+  background: transparent !important;
+  color: #aaa !important;
+  border: none;
+  border-radius: 0;
+  border-bottom: 3px solid transparent;
+  margin: 0 0.5rem;
+  cursor: pointer;
+  transition: color 0.2s, border-bottom 0.2s, transform 0.2s;
+  font-weight: 600;
+  font-size: 1.1rem;
+  box-shadow: none !important;
+}
+.custom-belief-tab.selected {
+  color: #fff !important;
+  border-bottom: 3px solid #fff;
+  background: transparent !important;
+  transform: scale(1.08);
+  font-weight: 700;
+}
+.custom-belief-tab:hover:not(.selected) {
+  color: #fff !important;
+  border-bottom: 3px solid #888;
+}
+
+/* --- Custom Care Group Tabs Styles --- */
+.custom-caregroup-tabs {
+  background: transparent;
+  border-bottom: 2.5px solid #aaa;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 0;
+  margin: 0 auto;
+  padding: 0;
+}
+.custom-caregroup-tab {
+  background: transparent !important;
+  color: #aaa !important;
+  border: none;
+  border-radius: 0;
+  margin: 0 1.5rem;
+  cursor: pointer;
+  transition: color 0.2s, transform 0.2s;
+  font-weight: 600;
+  font-size: 1.1rem;
+  box-shadow: none !important;
+  display: inline-block;
+  padding-left: 0;
+  padding-right: 0;
+  min-width: 0;
+  position: relative;
+}
+.custom-caregroup-tab.selected {
+  color: #111 !important;
+  background: transparent !important;
+  transform: scale(1.08);
+  font-weight: 700;
+}
+.custom-caregroup-tab.selected::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2.5px;
+  height: 3.5px;
+  background: #111;
+  border-radius: 2px;
+  z-index: 2;
+}
+.custom-caregroup-tab:hover:not(.selected) {
+  color: #111 !important;
+}
