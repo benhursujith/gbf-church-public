@@ -8,6 +8,8 @@ import { OtherPages } from '@/components/layout/other-pages';
 import { PageLayout } from '@/components/layout/page-layout';
 import { LatestSermon } from '@/components/sermonspage/latest-sermon';
 import { SermonsList } from '@/components/sermonspage/sermons-list';
+// import { SundayServiceBlock } from '@/components/sermonspage/sunday-service-block';
+// import { SundaysTimeline } from '@/components/sundayspage/sundays-timeline';
 
 import { otherPages, sermonPageHero } from '@/constant/config';
 
@@ -16,7 +18,7 @@ export default function SermonPage() {
     <PageLayout>
       {/* Heading Section */}
       <HeroHeading data={sermonPageHero} />
-      {/* latest Sermon */}
+      {/* Latest Sermon */}
       <LatestSermon />
       {/* Sermons list */}
       <SermonsList />

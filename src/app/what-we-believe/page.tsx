@@ -4,7 +4,6 @@
 import { HeroHeading } from '@/components/layout/hero-heading';
 import { OtherPages } from '@/components/layout/other-pages';
 import { PageLayout } from '@/components/layout/page-layout';
-import { CareGroups } from '@/components/whatwebelievepage/care-groups';
 import { WhatWeBelieve } from '@/components/whatwebelievepage/what-we-believe';
 import { WhatWeDo } from '@/components/whatwebelievepage/what-we-do';
 
@@ -16,7 +15,6 @@ export default function BeliefsPage() {
       {/* Heading */}
       <HeroHeading data={whatWeBelieveHero} />
       <WhatWeBelieve />
-      <CareGroups />
       {/* Other pages links */}
       <OtherPages data1={otherPages[2]} data2={otherPages[0]} />
     </PageLayout>

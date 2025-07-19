@@ -43,6 +43,14 @@ export const homepageTrendingPodcasts = {
     ' Explore our trending podcast series! Click on any to listen and dive into captivating stories, insightful discussions, and engaging content.',
 };
 
+export const sundaysHero = {
+  header: 'Sundays',
+  title: 'Join Us on',
+  subtitle: 'Sundays',
+  description: 'Experience meaningful worship, biblical teaching, and warm community every Sunday at Grace Bible Fellowship.',
+  image: '/images/sermons.jpg',
+};
+
 export const sermonPageHero = {
   header: 'Sermons',
   title: 'Watch. Learn.',
@@ -639,119 +647,104 @@ export const whatWeDoContent = [
 
 export const careGroups = [
   {
-    title: 'HORMAVU',
+    title: 'SARJAPUR RD',
     content: (
       <>
         <div className='carousel-cell w-full'>
-          <h3>Hormavu Cell Group</h3>
-          <p className='subhead'>Time : 7:15PM</p>
+          <h3>Sarjapur Rd Care Group</h3>
+          <p className='subhead'>Time : 7:00PM, Wednesday</p>
           <div className='md:text-sm lg:text-base xl:text-lg'>
             <p>
-              <strong>Spocs: Jaison George, Vinay Alexander</strong>
+              <strong>Spoc: Ben Kurian</strong>
             </p>
             <p>
-              The Hormavu Care group gathers in the Hormavu area every Friday
-              evening at 7:15 PM, rotating between different homes. They spend
-              their time singing together, sharing, and learning from the Word
-              of God.
+              The Sarjapur Rd Care group gathers every Wednesday at 7:00 PM. They spend their time singing together, sharing, and learning from the Word of God. Each care group is followed by fellowship over dinner.
             </p>
           </div>
         </div>
       </>
     ),
-    image: '/images/hormavu.jpg',
+    mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11420.783874518242!2d77.6838073240232!3d12.906561145263922!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1377591db561%3A0x77bf70ae3c020cf4!2sSarjapur%20Main%20Rd%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1752741210066!5m2!1sen!2sin',
   },
   {
-    title: 'HENNUR',
+    title: 'MARATHAHALLI',
     content: (
       <>
         <div className='carousel-cell w-full'>
-          <h3>Hennur Care Group</h3>
-          <p className='subhead'>Time : 7:30PM</p>
+          <h3>Marathahalli Care Group</h3>
+          <p className='subhead'>Time : 7:30PM, Thursday</p>
           <div className='md:text-sm lg:text-base xl:text-lg'>
             <p>
-              <strong>Spocs: Siji George, Prithvi G</strong>
+              <strong>Spoc: George Mattackal</strong>
             </p>
             <p>
-              The Hennur Care group convenes in the Hennur area every Friday at
-              7:30 PM, rotating between different homes each week. During these
-              gatherings, they participate in singing, sharing, and studying the
-              Word of God together.
+              The Marathahalli Care group gathers every Thursday at 7:30 PM. They spend their time singing together, sharing, and learning from the Word of God. Each care group is followed by fellowship over dinner.
             </p>
           </div>
         </div>
       </>
     ),
-    image: '/images/hennur.jpg',
+    mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31105.731521723006!2d77.692521!3d12.9579976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae13b4551d0957%3A0x597894d77e1e4919!2sMarathahalli%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1752741097045!5m2!1sen!2sin',
   },
   {
-    title: 'KOTHANUR',
+    title: 'J.P NAGAR',
     content: (
       <>
         <div className='carousel-cell w-full'>
-          <h3>Kothanur Care Group</h3>
-          <p className='subhead'>Time : 7:30PM</p>
+          <h3>J.P Nagar Care Group</h3>
+          <p className='subhead'>Time : 7:30PM, Friday</p>
           <div className='md:text-sm lg:text-base xl:text-lg'>
             <p>
-              <strong>Spocs: Kishor Hegde, Jestin James</strong>
+              <strong>Spoc: Ramanan</strong>
             </p>
             <p>
-              The Kothanur Care group assembles in the Kothanur area every
-              Friday at 7:30 PM, rotating among various homes. During these
-              gatherings, they engage in singing, sharing, and reflecting on the
-              teachings of the Word of God together.
+              The J.P Nagar Care group gathers every Friday at 7:30 PM. They spend their time singing together, sharing, and learning from the Word of God. Each care group is followed by fellowship over dinner.
             </p>
           </div>
         </div>
       </>
     ),
-    image: '/images/kothanur.jpg',
+    mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15555.842128758904!2d77.63552296951627!3d12.910258248390711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1491bfdc6ecd%3A0xf232718439fbc879!2sHSR%20Layout%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1752741276133!5m2!1sen!2sin',
   },
   {
-    title: 'OLD MADRAS ROAD',
+    title: 'ELECTRONIC CITY',
     content: (
       <>
         <div className='carousel-cell w-full'>
-          <h3>Old Madras Care Group</h3>
-          <p className='subhead'>Time : 7:30PM</p>
+          <h3>Electronic City Care Group</h3>
+          <p className='subhead'>Time : 8:00PM, Friday</p>
           <div className='md:text-sm lg:text-base xl:text-lg'>
             <p>
-              <strong>Spocs: Prashant Raja, John Paul</strong>
+              <strong>Spoc: Jean Thomas</strong>
             </p>
             <p>
-              The Old Madras Road Care group convenes every Friday at 7:30 PM in
-              the Old Madras Road area, rotating locations among different
-              homes. During these gatherings, they come together to sing, share,
-              and delve into the teachings of the Word of God.
+              The Electronic City Care group gathers every Friday at 8:00 PM. They spend their time singing together, sharing, and learning from the Word of God. Each care group is followed by fellowship over dinner.
             </p>
           </div>
         </div>
       </>
     ),
-    image: '/images/omr.jpg',
+    mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31120.66348947178!2d77.63522931963954!3d12.837917079147275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae6c8a7750e1c3%3A0x4a5cfc0fce5af71d!2sElectronic%20City%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1752741346091!5m2!1sen!2sin',
   },
   {
-    title: 'MALAYALAM',
+    title: 'KORAMANGALA',
     content: (
       <>
         <div className='carousel-cell w-full'>
-          <h3>Malayalam Care Group</h3>
-          <p className='subhead'>Time : 6:30PM</p>
+          <h3>Koramangala Care Group</h3>
+          <p className='subhead'>Time : 5:30PM, Saturday</p>
           <div className='md:text-sm lg:text-base xl:text-lg'>
             <p>
-              <strong>Spocs: Binny Abraham, George Joseph</strong>
+              <strong>Spoc: Justus George</strong>
             </p>
             <p>
-              The Malayalam Care Group convenes every Tuesday at 6:30 PM in the
-              Old Madras Road area, rotating locations among different homes and
-              sometimes over Zoom. During these gatherings, they come together
-              to sing, share, and delve into the teachings of the Word of God.
+              The Koramangala Care group gathers every Saturday at 5:30 PM. They spend their time singing together, sharing, and learning from the Word of God. Each care group is followed by fellowship over dinner.
             </p>
           </div>
         </div>
       </>
     ),
-    image: '/images/malayalam.jpg',
+    mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15556.441550940655!2d77.60182550967998!3d12.900622829044938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae14eec814197d%3A0xcf0ad378f26271e9!2sBommanahalli%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1752741318849!5m2!1sen!2sin',
   },
 ];
 

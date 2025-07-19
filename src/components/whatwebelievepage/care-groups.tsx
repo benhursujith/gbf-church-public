@@ -19,24 +19,22 @@ export function CareGroups() {
     () =>
       Object.values(tabList).map((tab: any, i) => (
         <TabsContent key={i} value={tabList[i]}>
-          <div className='flex flex-wrap items-center headline-defaults copy-defaults '>
-            <div className='w-full md:w-1/2'>
-              <div className='decoupled-carousel bg-navy relative w-full'>
-                <Image
-                  data-loaded='false'
-                  onLoad={(event) => {
-                    event.currentTarget.setAttribute('data-loaded', 'true');
-                  }}
-                  className='w-full lazyloaded data-[loaded=false]:animate-pulse data-[loaded=false]:bg-gray-100/10'
-                  width='1840'
-                  height='1740'
-                  alt={careGroups[tab].title}
-                  src={careGroups[tab].image}
-                  sizes='100vw'
+          <div className='flex flex-row items-start justify-center gap-4 headline-defaults copy-defaults'>
+            <div className='w-full md:w-1/3 flex justify-end'>
+              <div className='decoupled-carousel bg-navy relative' style={{ width: '90%' }}>
+                <iframe
+                  src={careGroups[tab].mapEmbed}
+                  width='100%'
+                  height='320'
+                  style={{ border: 0, borderRadius: '12px', minHeight: '320px', width: '100%' }}
+                  allowFullScreen
+                  loading='lazy'
+                  referrerPolicy='no-referrer-when-downgrade'
+                  title={careGroups[tab].title + ' Map'}
                 />
               </div>
             </div>
-            <div className='w-full md:w-1/2 px-8 lg:px-16 xl:px-32 py-8'>
+            <div className='w-full md:w-1/2 px-4 py-8 flex justify-start'>
               {careGroups[tab].content}
             </div>
           </div>

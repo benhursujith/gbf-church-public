@@ -8,7 +8,7 @@ export function ChurchTimeline() {
     <>
       {/* Sub-Heading */}
       <SubHeading
-        title={whoWeAreHero.timelineHeader}
+        title="Our Story"
         description={whoWeAreHero.timelineDescription}
       />
 

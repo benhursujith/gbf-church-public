@@ -11,7 +11,7 @@ export default function AboutUsPage() {
   return (
     <PageLayout>
       {/* Heading Section */}
-      <HeroHeading data={whoWeAreHero} />
+      <HeroHeading data={{ ...whoWeAreHero, title: 'Our Story' }} />
       {/* Timeline */}
       <ChurchTimeline />
       {/* Other pages links */}

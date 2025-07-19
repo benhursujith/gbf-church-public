@@ -45,7 +45,7 @@ export function HeroHeading({ data }: HeroProps) {
               className='relative z-10 w-full md:w-3/4 ml-auto mr-0 md:mr-4 rellax rellax-reverse'
               style={{ transform: 'translate3d(0px, -33px, 0px)' }}
             >
-              {(typeof image === 'string' && (image.startsWith('/') || image.startsWith('http'))) && (
+              {typeof image === 'string' && image.startsWith('/') && (
                 <Image
                   data-loaded='false'
                   onLoad={(event) => {
@@ -57,6 +57,16 @@ export function HeroHeading({ data }: HeroProps) {
                   alt={title}
                   src={image}
                   sizes='100vw'
+                />
+              )}
+              {typeof image === 'string' && image.startsWith('http') && (
+                <img
+                  className='relative lazyloaded data-[loaded=false]:animate-pulse data-[loaded=false]:bg-gray-100/10'
+                  width='1300'
+                  height='745'
+                  alt={title}
+                  src={image}
+                  style={{ width: '100%', height: 'auto' }}
                 />
               )}
             </div>
