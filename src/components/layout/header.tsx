@@ -174,17 +174,24 @@ export function Header({
                         <Link href='/who-we-are' className='block px-4 py-2 hover:bg-[#2e71ea] hover:text-white transition-colors'>Our Story</Link>
                       </li>
                       <li>
+<<<<<<< HEAD
                         <Link href='/what-we-believe' className='block px-4 py-2 hover:bg-[#2e71ea] hover:text-white transition-colors'>Statement of Faith</Link>
+=======
+                        <Link href='/what-we-believe' className='block px-4 py-2 hover:bg-[#2e71ea] hover:text-white transition-colors'>What We Believe</Link>
+>>>>>>> 258b8a76fc48e4d4da24e4c9712c45a3915fe013
                       </li>
                       <li>
                         <Link href='/leadership' className='block px-4 py-2 hover:bg-[#2e71ea] hover:text-white transition-colors'>Leadership</Link>
                       </li>
+<<<<<<< HEAD
                       <li>
                         <Link href='/our-distinctives' className='block px-4 py-2 hover:bg-[#2e71ea] hover:text-white transition-colors'>Our Distinctives</Link>
                       </li>
                       <li>
                         <Link href='/vision-purpose' className='block px-4 py-2 hover:bg-[#2e71ea] hover:text-white transition-colors'>Vision & Purpose</Link>
                       </li>
+=======
+>>>>>>> 258b8a76fc48e4d4da24e4c9712c45a3915fe013
                     </ul>
                   </div>
                 )}
@@ -362,7 +369,11 @@ export function Header({
                           setIsOpen(false);
                           setOurCommunityDropdownOpen(false);
                         }}
+<<<<<<< HEAD
                       >Statement of Faith</Link>
+=======
+                      >What We Believe</Link>
+>>>>>>> 258b8a76fc48e4d4da24e4c9712c45a3915fe013
                     </li>
                     <li>
                       <Link href='/leadership' className='block px-4 py-2 hover:bg-[#2e71ea] hover:text-white transition-colors'
@@ -372,6 +383,7 @@ export function Header({
                         }}
                       >Leadership</Link>
                     </li>
+<<<<<<< HEAD
                     <li>
                       <Link href='/our-distinctives' className='block px-4 py-2 hover:bg-[#2e71ea] hover:text-white transition-colors'
                         onClick={() => {
@@ -388,6 +400,8 @@ export function Header({
                         }}
                       >Vision & Purpose</Link>
                     </li>
+=======
+>>>>>>> 258b8a76fc48e4d4da24e4c9712c45a3915fe013
                   </ul>
                 )}
               </li>

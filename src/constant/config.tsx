@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { Instagram, Rss, Youtube } from 'lucide-react';
+=======
+import { Podcast, Rss, Youtube, Instagram } from 'lucide-react';
+>>>>>>> 258b8a76fc48e4d4da24e4c9712c45a3915fe013
 import Link from 'next/link';
 
 export const siteConfig = {
@@ -97,7 +101,11 @@ export const whoWeAreHero = {
 };
 
 export const whatWeBelieveHero = {
+<<<<<<< HEAD
   header: 'Statement of Faith',
+=======
+  header: 'What We Believe',
+>>>>>>> 258b8a76fc48e4d4da24e4c9712c45a3915fe013
   title: 'Our Core',
   subtitle: 'Beliefs.',
   description:
@@ -199,7 +207,11 @@ export const contactUsFAQ = [
           resurrection and teachings of Jesus. To know more, please go through
           the{' '}
           <Link className='underline hover:text-coral' href='/what-we-believe'>
+<<<<<<< HEAD
             'Statement of Faith'
+=======
+            'Our Beliefs'
+>>>>>>> 258b8a76fc48e4d4da24e4c9712c45a3915fe013
           </Link>{' '}
           and the{' '}
           <Link className='underline hover:text-coral' href='/who-we-are'>
@@ -316,7 +328,11 @@ export const otherPages = [
     link: '/who-we-are',
   },
   {
+<<<<<<< HEAD
     title: 'Statement of Faith',
+=======
+    title: 'What We Believe',
+>>>>>>> 258b8a76fc48e4d4da24e4c9712c45a3915fe013
     desc: 'Our Core Beliefs: Understanding Our Faith.',
     link: '/what-we-believe',
   },
@@ -366,7 +382,11 @@ export const footerAboutLinks = [
     link: '/who-we-are',
   },
   {
+<<<<<<< HEAD
     title: 'Statement of Faith',
+=======
+    title: 'What We Believe',
+>>>>>>> 258b8a76fc48e4d4da24e4c9712c45a3915fe013
     link: '/what-we-believe',
   },
   {
@@ -497,7 +517,11 @@ export const homepagePodcasts = [
 export const aboutMenuSection = {
   title: 'About us',
   description:
+<<<<<<< HEAD
     'Explore the heart of our values. Learn about our identity, statement of faith, and leadership. Click below to discover more about who we are, what we teach, and our dedicated leadership.',
+=======
+    'Explore the heart of our values. Learn about our identity, beliefs, and leadership. Click below to discover more about who we are, what we teach, and our dedicated leadership.',
+>>>>>>> 258b8a76fc48e4d4da24e4c9712c45a3915fe013
 };
 
 export const connectMenuSection = {
