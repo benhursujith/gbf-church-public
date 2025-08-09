@@ -10,7 +10,7 @@ export function SundayServiceBlock() {
             <h2 className="text-3xl font-bold mb-4">Sunday Worship Service</h2>
             <div className="flex items-center gap-3 mb-2">
               <Clock className="h-6 w-6 text-blue-600" />
-              <span className="text-lg font-semibold">9:45 AM – 11:30 AM</span>
+              <span className="text-lg font-semibold">9:45 AM – 12:00 PM</span>
             </div>
             <div className="flex items-center gap-3 mb-2">
               <MapPin className="h-6 w-6 text-blue-600" />

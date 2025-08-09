@@ -35,9 +35,9 @@ export function PodcastsList() {
             <div className='flex flex-wrap headline-defaults copy-defaults'>
               {/* list */}
               <div className='load-more-wrapper no-request'>
-                {/* podcasts list */}
+                {/* life topics list */}
                 <div className='fade-hover-area'>
-                  <div className='flex flex-wrap load-more-container'>
+                  <div className='flex flex-wrap load-more-container justify-center mx-[-16px]'>
                     {podcasts.slice(0, visibleItems).map((podcast, index) => (
                       <div
                         key={index}

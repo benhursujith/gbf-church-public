@@ -16,6 +16,9 @@ export function HeroSection() {
               {homepageHero.title}
             </h1>
             <div className='my-8 text-xl  max-w-lg'>
+              <div className='mb-4 font-bold text-2xl'>
+                <span className='text-white'>EXALT</span>.<span className='text-white'> EDIFY</span>.<span className='text-white'> EVANGELISE</span>.
+              </div>
               <p>{homepageHero.description}</p>
             </div>
           </div>

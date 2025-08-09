@@ -5,12 +5,8 @@ export function SundaysFAQ() {
       answer: "Come as you are! We're casual to business casual and care more about your presence than your attire.",
     },
     {
-      question: 'Is there childcare available?',
-      answer: 'Yes! We offer programs for children (infants through 5th grade) with secure check-in.',
-    },
-    {
       question: 'How long is the service?',
-      answer: 'Services last approximately 90 minutes, including worship, message, and response time.',
+      answer: 'Services last approximately 2 hours and 15 minutes, including worship, message, fellowship, and additional activities for kids and adults.',
     },
     {
       question: 'Will I be singled out as a visitor?',
@@ -19,10 +15,6 @@ export function SundaysFAQ() {
     {
       question: 'Where do I park?',
       answer: 'Free parking is available in our lot, with overflow spaces across the street.',
-    },
-    {
-      question: 'What is the gospel?',
-      answer: 'The gospel is the good news of Jesus Christ—His life, death, and resurrection for our salvation. We would love to share more with you in person!',
     },
   ];
 

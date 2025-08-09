@@ -14,7 +14,7 @@ export default function PodcastPage() {
     <PageLayout>
       {/* Heading Section */}
       <HeroHeading data={podcastPageHero} />
-      {/* Podcasts List */}
+      {/* Life Topics List */}
       <PodcastsList />
       {/* Other pages links */}
       <OtherPages data1={otherPages[2]} data2={otherPages[0]} />

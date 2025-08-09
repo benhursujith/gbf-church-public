@@ -92,7 +92,7 @@ export function PodcastList({ slug }: { slug: string }) {
           <div className='pt-16 md:pt-24 pb-16 md:pb-24'>
             <div className='flex flex-wrap headline-defaults copy-defaults'>
               <div className='load-more-wrapper no-request'>
-                {/* podcasts */}
+                {/* life topics */}
                 <div className='fade-hover-area'>
                   <div className='flex flex-wrap load-more-container resource-content'>
                     {videos.map(
@@ -143,7 +143,7 @@ export function PodcastList({ slug }: { slug: string }) {
                                 sizes='100vw'
                               />
 
-                              <p className='subhead'>PODCAST</p>
+                              <p className='subhead'>LIFE TOPICS</p>
                               <h3>{title}</h3>
                               <div className='max-w-2xl mb-4 md:text-lg'>
                                 <p>{podcastDescription}</p>

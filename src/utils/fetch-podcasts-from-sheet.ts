@@ -1,4 +1,4 @@
-// Utility to fetch and parse podcasts from Google Sheet CSV
+// Utility to fetch and parse life topics from Google Sheet CSV
 function parseCSV(text: string) {
   // Simple CSV parser that handles quoted fields with commas
   const lines = text.split('\n').filter(Boolean);

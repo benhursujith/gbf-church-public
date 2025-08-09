@@ -25,7 +25,7 @@ export default function HomePage() {
       <LatestSermon />
       {/* Sunday Gathering Location */}
       <ChurchLocation />
-      {/* Trending Podcasts */}
+      {/* Trending Life Topics */}
       <TrendingPodcasts />
       {/* Other pages links */}
       <OtherPages data1={otherPages[0]} data2={otherPages[1]} />

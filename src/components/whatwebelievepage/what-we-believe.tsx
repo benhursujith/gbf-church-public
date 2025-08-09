@@ -5,7 +5,7 @@ import { RefTagger } from 'react-reftagger';
 import { SubHeading } from '@/components/layout/sub-heading';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
-import { ourBeliefs, whatWeBelieveHero } from '@/constant/config';
+import { ourBeliefs, whatWeBelieveSecondContainer } from '@/constant/config';
 
 const customStyles = {
   heading: {
@@ -75,10 +75,10 @@ export function WhatWeBelieve() {
         customStyle={customStyles}
         bibleVersion='ESV'
       />
-      {/* Sub-Heading */}
+      {/* Sub-Heading - Second Container */}
       <SubHeading
-        title={whatWeBelieveHero.title}
-        description={whatWeBelieveHero.description}
+        title={whatWeBelieveSecondContainer.title}
+        description={whatWeBelieveSecondContainer.description}
         color='black'
       />
       <section className='relative z-10 overflow-hidden bg-black text-white'>

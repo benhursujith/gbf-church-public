@@ -1,4 +1,4 @@
-import { Podcast, Rss, Youtube, Instagram } from 'lucide-react';
+import { Instagram, Rss, Youtube } from 'lucide-react';
 import Link from 'next/link';
 
 export const siteConfig = {
@@ -13,7 +13,7 @@ export const homepageHero = {
   header: 'WELCOME TO',
   title: 'Grace Bible Fellowship',
   description:
-    'To whoever will come - all who are spiritually weary; all who mourn, all who struggle, all who sin, all who are lonely - this church opens wide her doors and offers them welcome in the name of the Lord and Savior Jesus Christ',
+    'To all who are weary, mourning, struggling - this church opens wide her doors in the name of Jesus Christ.',
   video: '/videos/hero.mp4',
 };
 
@@ -36,16 +36,16 @@ export const homepageChurchLocation = {
 };
 
 export const homepageTrendingPodcasts = {
-  title: 'Trending Podcasts',
-  subtitle1: 'PODCAST',
+  title: 'Trending Life Topics',
+  subtitle1: 'LIFE TOPICS',
   subtitle2: 'Explore',
   description:
-    ' Explore our trending podcast series! Click on any to listen and dive into captivating stories, insightful discussions, and engaging content.',
+    ' Explore our trending life topics series! Click on any to listen and dive into captivating stories, insightful discussions, and engaging content.',
 };
 
 export const sundaysHero = {
   header: 'Sundays',
-  title: 'Join Us on',
+  title: 'Join us on',
   subtitle: 'Sundays',
   description: 'Experience meaningful worship, biblical teaching, and warm community every Sunday at Grace Bible Fellowship.',
   image: '/images/sermons.jpg',
@@ -70,26 +70,22 @@ export const sermonPageHero = {
 };
 
 export const podcastPageHero = {
-  header: 'Podcasts',
+  header: 'Life Topics',
   title: 'Listen. Learn.',
   subtitle: 'Apply.',
   description:
-    'Welcome to our Podcast page, your gateway to captivating conversations and thought-provoking discussions. Tune in for insightful insights and inspiring stories, enriching your mind and fueling your curiosity. Start exploring today!',
+    'Welcome to our Life Topics page, your gateway to captivating conversations and thought-provoking discussions. Tune in for insightful insights and inspiring stories, enriching your mind and fueling your curiosity. Start exploring today!',
   image: '/images/podcasts.jpg',
-  podcastSeriesTitle: 'Podcast Series',
+  podcastSeriesTitle: 'Life Topics Series',
   podcastSeriesDescription:
-    'Engage and Enlighten: Tune into Our Podcast Series for Insightful Conversations on Faith, Life, and Community Connections.',
+    'Engage and Enlighten: Tune into Our Life Topics Series for Insightful Conversations on Faith, Life, and Community Connections.',
   podcastAPITitle: 'Explore the Series',
   podcastAPIDescription:
     ' Check back here to see if there`s any new content added.',
 };
 
 export const whoWeAreHero = {
-  header: 'Who We Are',
-  title: 'Our',
-  subtitle: 'Story.',
-  description:
-    'Grace Bible Fellowship was started by a few like-minded families who wanted to build a space for young people to follow Jesus, serve their city, and invite others to do the same.',
+  header: 'Our Story',
   image: '/images/aboutus.jpg',
   timelineHeader: 'Our Church Timeline',
   timelineDescription:
@@ -111,6 +107,11 @@ export const whatWeBelieveHero = {
     'Care groups provide a sense of family, deepen prayer life, offer support in crisis, facilitate sharing the faith, develop leadership, and enhance worship, aligning with the New Testament model of Christian community.',
 };
 
+export const whatWeBelieveSecondContainer = {
+  title: 'Our Statement of Faith',
+  description: 'We are a gospel-centered community that celebrates the life, death, resurrection and teachings of Jesus.',
+};
+
 export const leadershipPageHero = {
   header: 'Leadership',
   title: 'Meet Our',
@@ -120,7 +121,7 @@ export const leadershipPageHero = {
   image: '/images/leadership.jpg',
   eldersTitle: 'Meet Our Elders',
   eldersDescription:
-    'Elders oversee the life, teaching, and mission of Grace Bible Fellowship, and work to keep everything we do focused on our vision to be the church and reach the city.',
+    'Grace Bible Fellowship follows the model of leadership by a plurality of Elders. Elders oversee the life, teaching, and mission of Grace Bible Fellowship, and work to keep everything we do focused on our vision to be the church and reach the city.',
   deaconsTitle: 'Meet Our Deacons',
   deaconsDescription:
     'Deacons use their gifts to serve the Elders by providing  perspective, wisdom and counsel, and encouragement on church-wide theological or strategic matters',
@@ -130,7 +131,7 @@ export const leadershipElders = [
   {
     name: 'George Mattackal',
     title: 'ELDER',
-    bio: "George has served as an elder of CBF since 2010. He is passionate about teaching God's Word with a focus on practical application. He most enjoys seeing believers grow spiritually by applying Scriptural principles to every area of life. George's wife Sairah went to be with the Lord in 2012, a month after delivering their ninth child. Coming to terms with this loss strengthened his belief in God's sovereignty and faithfulness, and he sees all circumstances in life as part of God's work of molding us closer to the image of Christ. George works for a multinational IT services company and is the father of two girls and seven boys.",
+    bio: "George served as an elder of our planting church CBF since 2010 and of GBF since its founding in 2023. He is passionate about teaching God's Word with a focus on practical application. He most enjoys seeing believers grow spiritually by applying Scriptural principles to every area of life. George's wife Sairah went to be with the Lord in 2012, a month after delivering their ninth child. Coming to terms with this loss strengthened his belief in God's sovereignty and faithfulness, and he sees all circumstances in life as part of God's work of molding us closer to the image of Christ. George previously worked for a multinational IT services company but retired in January 2024 and now serves the church and is also part of several teaching ministries across India. George is the father of two girls and seven boys.",
     image: '/images/George.png',
   },
   {
@@ -151,23 +152,25 @@ export const leadershipDeacons = [
   {
     name: 'Eldy Eldhose',
     title: 'DEACON',
+    description: "Couples' ministry & Missions",
     image: '/images/Eldy.png',
   },
   {
     name: 'Jean Thomas',
     title: 'DEACON',
+    description: "Kids' Ministry",
     image: '/images/Jean.png',
   },
-
   {
     name: 'Ben Kurian',
     title: 'DEACON',
+    description: 'Teaching Ministry & Discipleship',
     image: '/images/Ben.png',
   },
-
   {
     name: 'Nithin Philip',
     title: 'DEACON',
+    description: "Singles' Ministry & Sunday Service Coordination",
     image: '/images/nithin.png',
   },
 ];
@@ -203,7 +206,7 @@ export const contactUsFAQ = [
           </Link>{' '}
           and the{' '}
           <Link className='underline hover:text-coral' href='/who-we-are'>
-            'Who We Are'
+            'Our Story'
           </Link>{' '}
           pages.
         </p>
@@ -311,7 +314,7 @@ export const ErrorContent = {
 
 export const otherPages = [
   {
-    title: 'Who We Are',
+    title: 'Our Story',
     desc: 'Where We Started: Learning about our origin.',
     link: '/who-we-are',
   },
@@ -331,8 +334,8 @@ export const otherPages = [
     link: '/sermons',
   },
   {
-    title: 'More Podcasts?',
-    desc: 'Discover transformative podcasts for spiritual growth.',
+    title: 'More Life Topics?',
+    desc: 'Discover transformative life topics for spiritual growth.',
     link: '/podcasts',
   },
 ];
@@ -362,7 +365,7 @@ export const footerQuickLinks = [
 
 export const footerAboutLinks = [
   {
-    title: 'Who We Are',
+    title: 'Our Story',
     link: '/who-we-are',
   },
   {
@@ -983,7 +986,7 @@ export const ourBeliefs = [
 
 export const timelineItems = [
   {
-    title: '2001',
+    title: '2002',
     cardTitle: 'The Vision',
     media: {
       name: 'vision',
@@ -992,11 +995,11 @@ export const timelineItems = [
       },
       type: 'IMAGE',
     },
-    cardDetailedText: `Our story began when a few believers were burdened for professionals and students coming to Bangalore who needed a church where they felt comfortable, a gathering open to those seeking answers regarding their faith, and where they felt secure bringing their friends.`,
+    cardDetailedText: `Our origin story goes back to the year 2002 when a few like-minded believers were burdened for professionals and students in Bangalore who needed a church where they could grow in their faith and where they felt comfortable bringing their friends. `,
   },
   {
-    title: '2022',
-    cardTitle: 'Our beginnings - The church plant',
+    title: '2009',
+    cardTitle: 'Our beginnings',
     media: {
       name: 'first-step',
       source: {
@@ -1004,11 +1007,11 @@ export const timelineItems = [
       },
       type: 'IMAGE',
     },
-    cardDetailedText: `With this vision in mind, these believers began gathering in the aerobics room of a gym in Domlur on Airport Road. Eventually as the gathering grew, they named the church, appropriately, 'Airport Road Fellowship'. As the new church grew in the Lord and in numbers, God provided for their every need and blessed the young group.`,
+    cardDetailedText: `This desire led to the formation of Airport Road Fellowship (ARF) whcih met on Old Airport Road in the Domlur area. God blessed the church and 2009 saw a move to a larger space on St. Marks Road and a change in name to Calvary Bible Fellowship. Further blessing and growth led to yet another move to the Ulsoor area.`,
   },
   {
-    title: '2025',
-    cardTitle: 'Today',
+    title: '2021',
+    cardTitle: 'The church plant',
     media: {
       name: 'second-step',
       source: {
@@ -1016,20 +1019,20 @@ export const timelineItems = [
       },
       type: 'IMAGE',
     },
-    cardDetailedText: `By April 2009, Airport Road Fellowship had outgrown the gymnasium. With extraordinary timing, the Ashirvad auditorium in St. Joseph's Jesuit Seminary on St. Mark's Road became available and the church moved their meetings there. With the name "Airport Road Fellowship" now out of date, the church was renamed 'Calvary Bible Fellowship' (CBF).`,
+    cardDetailedText: `By 2021 CBF had grown substantially and the church began praying about planting a new gathring in the south side of Bangalore. In answer to these prayers, Grace Bible Fellowship was established in January 2023, meeting on the campus of Christ University in the SG Palya area. The initial launch team for GBF consisted of 3 elders and some 70 members living in South Bangalore. `,
   },
-  // {
-  //   title: '2017',
-  //   cardTitle: 'And Another Move!',
-  //   media: {
-  //     name: 'third-step',
-  //     source: {
-  //       url: '/images/wcoi-step.jpg',
-  //     },
-  //     type: 'IMAGE',
-  //   },
-  //   cardDetailedText: `Eventually, CBF was blessed with more members and moved to "World Cassette Outreach of India" on Osborne Road.`,
-  // },
+  {
+    title: '2025',
+    cardTitle: 'Today',
+    media: {
+      name: 'third-step',
+      source: {
+        url: '/images/wcoi-step.jpg',
+      },
+      type: 'IMAGE',
+    },
+    cardDetailedText: `Today, GBF is a growing and diverse congregation of all ages and backgrounds. In addition to a Sunday worship meeting at the DVK Annex on the campus of Christ University, GBF conducts regular Bible studies, prayer meetings and a number of care cells across the city during the week to help believers grow spiritually and build deep and lasting relationships with each other. The church is also involved with missions and social outreach in Bangalore and across India.`,
+  },
   // {
   //   title: '2022',
   //   cardTitle: 'Church Plant',

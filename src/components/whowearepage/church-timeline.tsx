@@ -13,7 +13,7 @@ export function ChurchTimeline() {
       />
 
       {/* Timeline  */}
-      <section className='relative z-10 overflow-hidden bg-gray-200 text-black'>
+      <section className='relative z-10 overflow-hidden bg-white text-black'>
         <div className='wrapper relative z-20 animate-in effect-fade-in entered'>
           <div className='pt-16 md:pt-36 pb-16 md:pb-36'>
             <div className='flex flex-wrap items-center '>

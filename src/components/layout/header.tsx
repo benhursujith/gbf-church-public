@@ -1,7 +1,7 @@
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import React, { Dispatch, useEffect, useRef, useState } from 'react';
 
 import { contactUsContent } from '@/constant/config';
@@ -15,6 +15,7 @@ export function Header({
 }) {
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -56,9 +57,14 @@ export function Header({
   useEffect(() => {
     if (!resourcesDropdownOpen) return;
     function handleClickOutside(event: MouseEvent) {
+      const target = event.target as Node;
+      // Don't close if clicking on a link within the dropdown
+      if (target instanceof Element && target.closest('a')) {
+        return;
+      }
       if (
         resourcesDropdownRef.current &&
-        !resourcesDropdownRef.current.contains(event.target as Node)
+        !resourcesDropdownRef.current.contains(target)
       ) {
         setResourcesDropdownOpen(false);
       }
@@ -75,9 +81,14 @@ export function Header({
   useEffect(() => {
     if (!ourCommunityDropdownOpen) return;
     function handleClickOutside(event: MouseEvent) {
+      const target = event.target as Node;
+      // Don't close if clicking on a link within the dropdown
+      if (target instanceof Element && target.closest('a')) {
+        return;
+      }
       if (
         ourCommunityDropdownRef.current &&
-        !ourCommunityDropdownRef.current.contains(event.target as Node)
+        !ourCommunityDropdownRef.current.contains(target)
       ) {
         setOurCommunityDropdownOpen(false);
       }
@@ -94,9 +105,14 @@ export function Header({
   useEffect(() => {
     if (!ourInitiativesDropdownOpen) return;
     function handleClickOutside(event: MouseEvent) {
+      const target = event.target as Node;
+      // Don't close if clicking on a link within the dropdown
+      if (target instanceof Element && target.closest('a')) {
+        return;
+      }
       if (
         ourInitiativesDropdownRef.current &&
-        !ourInitiativesDropdownRef.current.contains(event.target as Node)
+        !ourInitiativesDropdownRef.current.contains(target)
       ) {
         setOurInitiativesDropdownOpen(false);
       }
@@ -151,7 +167,7 @@ export function Header({
                   <span>Sundays</span>
                 </Link>
               </li>
-              {/* Our Community Dropdown */}
+              {/* About us Dropdown */}
               <li
                 ref={ourCommunityDropdownRef}
                 className="relative block mx-4 my-0 xl:mx-2 xl:my-4"
@@ -162,7 +178,7 @@ export function Header({
                   onClick={() => setOurCommunityDropdownOpen((open) => !open)}
                   aria-expanded={ourCommunityDropdownOpen}
                 >
-                  <span>Our Community</span>
+                  <span>About us</span>
                   <svg className='ml-2 w-4 h-4' fill='none' stroke='currentColor' strokeWidth='2' viewBox='0 0 24 24'>
                     <path strokeLinecap='round' strokeLinejoin='round' d='M19 9l-7 7-7-7' />
                   </svg>
@@ -211,6 +227,15 @@ export function Header({
                       <li>
                         <Link href='/care-groups' className='block px-4 py-2 hover:bg-[#2e71ea] hover:text-white transition-colors'>Care Groups</Link>
                       </li>
+                      <li>
+                        <Link href='/kids-ministry' className='block px-4 py-2 hover:bg-[#2e71ea] hover:text-white transition-colors'>Kids' Ministry</Link>
+                      </li>
+                      <li>
+                        <Link href='/equip-sessions' className='block px-4 py-2 hover:bg-[#2e71ea] hover:text-white transition-colors'>Equip Sessions</Link>
+                      </li>
+                      <li>
+                        <Link href='/sports-community' className='block px-4 py-2 hover:bg-[#2e71ea] hover:text-white transition-colors'>Sports Community</Link>
+                      </li>
                     </ul>
                   </div>
                 )}
@@ -238,7 +263,7 @@ export function Header({
                         <Link href='/sermons' className='block px-4 py-2 hover:bg-[#2e71ea] hover:text-white transition-colors'>Sermons</Link>
                       </li>
                       <li>
-                        <Link href='/podcasts' className='block px-4 py-2 hover:bg-[#2e71ea] hover:text-white transition-colors'>Podcasts</Link>
+                        <Link href='/podcasts' className='block px-4 py-2 hover:bg-[#2e71ea] hover:text-white transition-colors'>Life Topics</Link>
                       </li>
                     </ul>
                   </div>
@@ -341,7 +366,7 @@ export function Header({
                   onClick={() => setOurCommunityDropdownOpen((open) => !open)}
                   aria-expanded={ourCommunityDropdownOpen}
                 >
-                  <span>Our Community</span>
+                  <span>About us</span>
                   <svg className={`ml-2 w-4 h-4 transform transition-transform ${ourCommunityDropdownOpen ? 'rotate-180' : ''}`} fill='none' stroke='currentColor' strokeWidth='2' viewBox='0 0 24 24'>
                     <path strokeLinecap='round' strokeLinejoin='round' d='M19 9l-7 7-7-7' />
                   </svg>
@@ -350,41 +375,61 @@ export function Header({
                   <ul className='pl-4 py-2 bg-black bg-opacity-80 rounded list-none'>
                     <li>
                       <Link href='/who-we-are' className='block px-4 py-2 hover:bg-[#2e71ea] hover:text-white transition-colors'
-                        onClick={() => {
-                          setIsOpen(false);
-                          setOurCommunityDropdownOpen(false);
+                        onClick={(e) => {
+                          e.preventDefault();
+                          router.push('/who-we-are');
+                          setTimeout(() => {
+                            setIsOpen(false);
+                            setOurCommunityDropdownOpen(false);
+                          }, 150);
                         }}
                       >Our Story</Link>
                     </li>
                     <li>
                       <Link href='/what-we-believe' className='block px-4 py-2 hover:bg-[#2e71ea] hover:text-white transition-colors'
-                        onClick={() => {
-                          setIsOpen(false);
-                          setOurCommunityDropdownOpen(false);
+                        onClick={(e) => {
+                          e.preventDefault();
+                          router.push('/what-we-believe');
+                          setTimeout(() => {
+                            setIsOpen(false);
+                            setOurCommunityDropdownOpen(false);
+                          }, 150);
                         }}
                       >Statement of Faith</Link>
                     </li>
                     <li>
                       <Link href='/leadership' className='block px-4 py-2 hover:bg-[#2e71ea] hover:text-white transition-colors'
-                        onClick={() => {
-                          setIsOpen(false);
-                          setOurCommunityDropdownOpen(false);
+                        onClick={(e) => {
+                          e.preventDefault();
+                          router.push('/leadership');
+                          setTimeout(() => {
+                            setIsOpen(false);
+                            setOurCommunityDropdownOpen(false);
+                          }, 150);
                         }}
                       >Leadership</Link>
                     </li>
                     <li>
                       <Link href='/our-distinctives' className='block px-4 py-2 hover:bg-[#2e71ea] hover:text-white transition-colors'
-                        onClick={() => {
-                          setIsOpen(false);
-                          setOurCommunityDropdownOpen(false);
+                        onClick={(e) => {
+                          e.preventDefault();
+                          router.push('/our-distinctives');
+                          setTimeout(() => {
+                            setIsOpen(false);
+                            setOurCommunityDropdownOpen(false);
+                          }, 150);
                         }}
                       >Our Distinctives</Link>
                     </li>
                     <li>
                       <Link href='/vision-purpose' className='block px-4 py-2 hover:bg-[#2e71ea] hover:text-white transition-colors'
-                        onClick={() => {
-                          setIsOpen(false);
-                          setOurCommunityDropdownOpen(false);
+                        onClick={(e) => {
+                          e.preventDefault();
+                          router.push('/vision-purpose');
+                          setTimeout(() => {
+                            setIsOpen(false);
+                            setOurCommunityDropdownOpen(false);
+                          }, 150);
                         }}
                       >Vision & Purpose</Link>
                     </li>
@@ -407,11 +452,51 @@ export function Header({
                   <ul className='pl-4 py-2 bg-black bg-opacity-80 rounded list-none'>
                     <li>
                       <Link href='/care-groups' className='block px-4 py-2 hover:bg-[#2e71ea] hover:text-white transition-colors'
-                        onClick={() => {
-                          setIsOpen(false);
-                          setOurInitiativesDropdownOpen(false);
+                        onClick={(e) => {
+                          e.preventDefault();
+                          router.push('/care-groups');
+                          setTimeout(() => {
+                            setIsOpen(false);
+                            setOurInitiativesDropdownOpen(false);
+                          }, 150);
                         }}
                       >Care Groups</Link>
+                    </li>
+                    <li>
+                      <Link href='/kids-ministry' className='block px-4 py-2 hover:bg-[#2e71ea] hover:text-white transition-colors'
+                        onClick={(e) => {
+                          e.preventDefault();
+                          router.push('/kids-ministry');
+                          setTimeout(() => {
+                            setIsOpen(false);
+                            setOurInitiativesDropdownOpen(false);
+                          }, 150);
+                        }}
+                      >Kids' Ministry</Link>
+                    </li>
+                    <li>
+                      <Link href='/equip-sessions' className='block px-4 py-2 hover:bg-[#2e71ea] hover:text-white transition-colors'
+                        onClick={(e) => {
+                          e.preventDefault();
+                          router.push('/equip-sessions');
+                          setTimeout(() => {
+                            setIsOpen(false);
+                            setOurInitiativesDropdownOpen(false);
+                          }, 150);
+                        }}
+                      >Equip Sessions</Link>
+                    </li>
+                    <li>
+                      <Link href='/sports-community' className='block px-4 py-2 hover:bg-[#2e71ea] hover:text-white transition-colors'
+                        onClick={(e) => {
+                          e.preventDefault();
+                          router.push('/sports-community');
+                          setTimeout(() => {
+                            setIsOpen(false);
+                            setOurInitiativesDropdownOpen(false);
+                          }, 150);
+                        }}
+                      >Sports Community</Link>
                     </li>
                   </ul>
                 )}
@@ -433,19 +518,27 @@ export function Header({
                   <ul className='pl-4 py-2 bg-black bg-opacity-80 rounded list-none'>
                     <li>
                       <Link href='/sermons' className='block px-4 py-2 hover:bg-[#2e71ea] hover:text-white transition-colors'
-                        onClick={() => {
-                          setIsOpen(false);
-                          setResourcesDropdownOpen(false);
+                        onClick={(e) => {
+                          e.preventDefault();
+                          router.push('/sermons');
+                          setTimeout(() => {
+                            setIsOpen(false);
+                            setResourcesDropdownOpen(false);
+                          }, 150);
                         }}
                       >Sermons</Link>
                     </li>
                     <li>
                       <Link href='/podcasts' className='block px-4 py-2 hover:bg-[#2e71ea] hover:text-white transition-colors'
-                        onClick={() => {
-                          setIsOpen(false);
-                          setResourcesDropdownOpen(false);
+                        onClick={(e) => {
+                          e.preventDefault();
+                          router.push('/podcasts');
+                          setTimeout(() => {
+                            setIsOpen(false);
+                            setResourcesDropdownOpen(false);
+                          }, 150);
                         }}
-                      >Podcasts</Link>
+                      >Life Topics</Link>
                     </li>
                   </ul>
                 )}

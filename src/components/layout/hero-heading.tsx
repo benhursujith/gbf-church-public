@@ -31,15 +31,19 @@ export function HeroHeading({ data }: HeroProps) {
         <div className='wrapper py-12 md:py-24 lg:py-32'>
           <div className='flex flex-wrap copy-defaults relative '>
             <div className='w-full md:w-3/4 xl:w-1/2 px-4 z-20 headline-defaults copy-defaults relative md:absolute md:vertical-center '>
-              <p className='subhead'>{header}</p>
-              <h1 className=''>
-                {title}
-                <br />
-                {subtitle}
-              </h1>
-              <div className='my-8 text-xl  max-w-lg'>
-                <p>{description}</p>
-              </div>
+              {header && <p className='subhead'>{header}</p>}
+              {(title || subtitle) && (
+                <h1 className=''>
+                  {title}
+                  {title && subtitle && <br />}
+                  {subtitle}
+                </h1>
+              )}
+              {description && (
+                <div className='my-8 text-xl  max-w-lg'>
+                  <p>{description}</p>
+                </div>
+              )}
             </div>
             <div
               className='relative z-10 w-full md:w-3/4 ml-auto mr-0 md:mr-4 rellax rellax-reverse'
@@ -54,7 +58,7 @@ export function HeroHeading({ data }: HeroProps) {
                   className='relative lazyloaded data-[loaded=false]:animate-pulse data-[loaded=false]:bg-gray-100/10'
                   width='1300'
                   height='745'
-                  alt={title}
+                  alt={title || header}
                   src={image}
                   sizes='100vw'
                 />
@@ -64,7 +68,7 @@ export function HeroHeading({ data }: HeroProps) {
                   className='relative lazyloaded data-[loaded=false]:animate-pulse data-[loaded=false]:bg-gray-100/10'
                   width='1300'
                   height='745'
-                  alt={title}
+                  alt={title || header}
                   src={image}
                   style={{ width: '100%', height: 'auto' }}
                 />

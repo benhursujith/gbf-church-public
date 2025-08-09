@@ -34,7 +34,7 @@ export function TrendingPodcasts() {
               <div className='fade-hover-area'>
                 <div className='flex flex-wrap load-more-container justify-center mx-[-16px]'>
                   {podcasts.length === 0 ? (
-                    <div className='w-full text-center text-gray-400 py-8'>No podcasts available at the moment.</div>
+                    <div className='w-full text-center text-gray-400 py-8'>No life topics available at the moment.</div>
                   ) : (
                     podcasts.map((podcast, index) => (
                       <div

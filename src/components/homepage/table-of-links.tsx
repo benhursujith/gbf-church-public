@@ -1,7 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
-import { useEffect, useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
+
 import {
   aboutMenuSection,
   connectMenuSection,
@@ -36,9 +37,6 @@ export function TableOfLinks() {
                 <h2>
                   <span className='my-4 md:my-8'>{aboutMenuSection.title}</span>
                 </h2>
-                <div className='rich-text md:my-4 py-px max-w-4xl lg:pr-8 xl:pr-16 '>
-                  <p>{aboutMenuSection.description}</p>
-                </div>
                 <div className='fade-hover-area fade-hover-area-dark'>
                   {otherPages.slice(0, 3).map((page, index) => (
                     <p
@@ -66,9 +64,6 @@ export function TableOfLinks() {
                     {connectMenuSection.title}
                   </span>
                 </h2>
-                <div className='rich-text md:my-4 py-px max-w-4xl lg:pr-8 xl:pr-16 '>
-                  <p>{connectMenuSection.description}</p>
-                </div>
                 <div className='fade-hover-area fade-hover-area-dark'>
                   {series.length > 0
                     ? series.map((s, index) => (

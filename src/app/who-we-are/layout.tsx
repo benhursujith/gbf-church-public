@@ -4,7 +4,7 @@ import { Metadata } from 'next';
 import * as React from 'react';
 
 export const metadata: Metadata = {
-  title: 'Who We Are',
+  title: 'Our Story',
   description: 'Where We Started: Learning about our origin.',
 };
 

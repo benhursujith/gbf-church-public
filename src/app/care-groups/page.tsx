@@ -12,7 +12,7 @@ export default function CareGroupsPage() {
     title: 'Our',
     subtitle: 'Care Groups',
     description: whatWeBelieveHero.careGroupDescription,
-    image: '/images/sermons.jpg', // Use a local image for now
+    image: '/images/care-groups.jpg', // Updated to use the new care groups image
   };
   return (
     <PageLayout>

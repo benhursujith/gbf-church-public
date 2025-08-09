@@ -38,6 +38,11 @@ export function DeaconsList() {
                   <p className='text-center font-bold font-sans text-xl'>
                     {deacon.name}
                   </p>
+                  {deacon.description && (
+                    <p className='text-center text-gray-600 font-medium mt-2'>
+                      {deacon.description}
+                    </p>
+                  )}
                 </div>
               ))}
             </div>
