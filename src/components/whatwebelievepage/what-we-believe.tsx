@@ -86,7 +86,7 @@ export function WhatWeBelieve() {
           <div className='pt-2 md:pt-4 pb-2 md:pb-4'>
             <Tabs defaultValue={tabList[0]} onValueChange={setActiveTab}>
               {/* Tab buttons */}
-              <div className='carousel-custom-nav flex justify-center mb-2 mt-2 px-4'>
+              <div className='carousel-custom-nav flex justify-center mb-2 mt-2 px-2 md:px-4'>
                 <TabsList className='w-full flex-row custom-belief-tabs'>
                   {tabList.map((tab: any, i: number) => (
                     <TabsTrigger

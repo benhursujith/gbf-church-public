@@ -19,9 +19,9 @@ export function CareGroups() {
     () =>
       Object.values(tabList).map((tab: any, i) => (
         <TabsContent key={i} value={tabList[i]}>
-          <div className='flex flex-row items-start justify-center gap-4 headline-defaults copy-defaults'>
-            <div className='w-full md:w-1/3 flex justify-end'>
-              <div className='decoupled-carousel bg-navy relative' style={{ width: '90%' }}>
+          <div className='flex flex-col md:flex-row items-start justify-center gap-4 headline-defaults copy-defaults'>
+            <div className='w-full md:w-1/3 flex justify-center md:justify-end'>
+              <div className='decoupled-carousel bg-navy relative' style={{ width: '100%', maxWidth: '400px' }}>
                 <iframe
                   src={careGroups[tab].mapEmbed}
                   width='100%'
@@ -34,7 +34,7 @@ export function CareGroups() {
                 />
               </div>
             </div>
-            <div className='w-full md:w-1/2 px-4 py-8 flex justify-start'>
+            <div className='w-full md:w-1/2 px-4 py-4 md:py-8 flex justify-start'>
               {careGroups[tab].content}
             </div>
           </div>
@@ -56,7 +56,7 @@ export function CareGroups() {
           <div className='pt-16 md:pt-24 pb-16 md:pb-24'>
             <Tabs defaultValue={tabList[0]} onValueChange={setActiveTab}>
               {/* Tab buttons */}
-              <div className='carousel-custom-nav flex justify-center mb-4 mt-4 px-4'>
+              <div className='carousel-custom-nav flex justify-center mb-4 mt-4 px-2 md:px-4'>
                 <TabsList className='w-full flex-row custom-caregroup-tabs'>
                   {tabList.map((tab: any, i: number) => (
                     <TabsTrigger

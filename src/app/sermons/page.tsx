@@ -34,7 +34,7 @@ export default function SermonPage() {
       </section>
       {/* Latest Sermon */}
       <LatestSermon />
-      {/* Sermons list */}
+      {/* Sermons list with Suspense boundary */}
       <Suspense fallback={<div className="py-12 text-center">Loading sermons...</div>}>
         <SermonsList />
       </Suspense>
