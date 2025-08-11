@@ -5,7 +5,7 @@ import { contactUsContent } from '@/constant/config';
 
 export function Address() {
   return (
-    <section className='relative z-10 overflow-hidden bg-black text-white'>
+    <section className='relative z-10 overflow-hidden bg-white text-black'>
       <div className='wrapper relative z-20 animate-in effect-fade-in entered'>
         <div className='pt-16 md:pt-24 pb-16 md:pb-24'>
           <div className='flex flex-wrap items-center '>
@@ -43,35 +43,17 @@ export function Address() {
             </div>
             <div className='w-full px-4 md:w-7/12'>
               <div className='my-4'>
-                {/* <Link
-                  href={contactUsContent.location}
-                  rel='noopener noreferrer'
-                  target='_blank'
-                >
-                  <Image
-                    data-loaded='false'
-                    onLoad={(event) => {
-                      event.currentTarget.setAttribute('data-loaded', 'true');
-                    }}
-                    className=' lazyloaded data-[loaded=false]:animate-pulse data-[loaded=false]:bg-gray-100/10'
-                    width='1000'
-                    height='709'
-                    alt={contactUsContent.addressTitle}
-                    src={contactUsContent.addressImage}
-                    data-srcset=''
-                    sizes='100vw'
+                <div className='rounded-lg overflow-hidden shadow-md border border-gray-200'>
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.640792564692!2d77.60353027635654!3d12.930793287380839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15a40c7762df%3A0xc042dbe4e5424cae!2sGrace%20Bible%20Fellowship!5e0!3m2!1sen!2sin!4v1752766947452!5m2!1sen!2sin"
+                    width="100%"
+                    height="400"
+                    style={{ border: 0 }}
+                    allowFullScreen={true}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Grace Bible Fellowship Location"
                   />
-                </Link> */}
-                <div className='google-map-area'>
-                  <div className='mapouter'>
-                    <div className='gmap_canvas'>
-                      <iframe
-                        className='w-full h-[50vh]'
-                        id='gmap_canvas'
-                        src='https://g.co/kgs/9XuLd9o'
-                      />
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>

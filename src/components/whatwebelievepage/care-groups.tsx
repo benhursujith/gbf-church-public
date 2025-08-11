@@ -51,7 +51,7 @@ export function CareGroups() {
         description={whatWeBelieveHero.careGroupDescription}
         color='white'
       />
-      <section className='relative z-10 carousel-section overflow-hidden bg-gray-200 text-black'>
+      <section className='relative z-10 carousel-section overflow-hidden bg-white text-black'>
         <div className='wrapper relative z-20 animate-in effect-fade-in entered '>
           <div className='pt-16 md:pt-24 pb-16 md:pb-24'>
             <Tabs defaultValue={tabList[0]} onValueChange={setActiveTab}>

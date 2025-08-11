@@ -5,7 +5,7 @@ interface HeroData {
   header: string;
   title: string;
   subtitle: string;
-  description: string;
+  description?: string;
   image: any;
 }
 

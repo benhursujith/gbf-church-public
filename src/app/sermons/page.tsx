@@ -8,6 +8,8 @@ import { OtherPages } from '@/components/layout/other-pages';
 import { PageLayout } from '@/components/layout/page-layout';
 import { LatestSermon } from '@/components/sermonspage/latest-sermon';
 import { SermonsList } from '@/components/sermonspage/sermons-list';
+import { SeriesBlocks } from '@/components/sermonspage/series-blocks';
+import { SocialLinks } from '@/components/ui/social-links';
 // import { SundayServiceBlock } from '@/components/sermonspage/sunday-service-block';
 // import { SundaysTimeline } from '@/components/sundayspage/sundays-timeline';
 
@@ -18,6 +20,17 @@ export default function SermonPage() {
     <PageLayout>
       {/* Heading Section */}
       <HeroHeading data={sermonPageHero} />
+      {/* Social Links */}
+      <section className="py-12 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Follow Our Content</h2>
+            <p className="text-gray-600">Subscribe to our YouTube channel and Spotify podcast to stay tuned to our content</p>
+          </div>
+          <SeriesBlocks />
+          <SocialLinks />
+        </div>
+      </section>
       {/* Latest Sermon */}
       <LatestSermon />
       {/* Sermons list */}

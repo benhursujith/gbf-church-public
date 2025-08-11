@@ -4,8 +4,9 @@ import Link from 'next/link';
 import { Key } from 'react';
 
 import {
-  footerAboutLinks,
-  footerQuickLinks,
+  footerColumn1Links,
+  footerColumn2Links,
+  footerColumn3Links,
   footerSocialLinks,
   siteConfig,
 } from '@/constant/config';
@@ -16,7 +17,7 @@ export function Footer() {
       <div className='wrapper relative z-10'>
         <div className='flex flex-wrap md:flex-nowrap items-start justify-between py-8 md:pt-16 md:pb-24 px-4'>
           {/* Logo */}
-          <div className='w-full md:w-1/3 xl:w-1/3 flex justify-center mb-8 md:mb-0'>
+          <div className='w-full md:w-1/4 xl:w-1/4 flex justify-center mb-8 md:mb-0'>
             <Image
               data-loaded='false'
               onLoad={(event) => {
@@ -30,37 +31,48 @@ export function Footer() {
               width={400}
             />
           </div>
-          {/* links */}
-          <div className='w-full md:w-1/3 xl:w-1/3 flex flex-col items-start'>
-            <p className='subhead mb-2'><span className='hover:underline'>About Us</span></p>
-            <div className='flex w-full'>
-              <ul className='list-none pl-0 font-sans xl:mt-4 w-1/2'>
-                {footerAboutLinks.slice(0, 2).map(({ title, link }: any, index: Key | null | undefined) => (
-                  <li key={index} className='pr-4 mb-1'>
-                    <Link className='hover:underline hover:text-[#2e71ea]' href={link}>{title}</Link>
-                  </li>
-                ))}
-              </ul>
-              <ul className='list-none pl-0 font-sans xl:mt-4 w-1/2'>
-                {footerAboutLinks.slice(2, 4).map(({ title, link }: any, index: Key | null | undefined) => (
-                  <li key={index} className='pr-4 mb-1'>
-                    <Link className='hover:underline hover:text-[#2e71ea]' href={link}>{title}</Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-          <div className='w-full md:w-1/3 xl:w-1/3 flex flex-col items-start mt-8 md:mt-0'>
-            <p className='subhead mb-2'>{siteConfig.questions}</p>
+          {/* Column 1 Links */}
+          <div className='w-full md:w-1/4 xl:w-1/4 flex flex-col items-start md:ml-12'>
             <ul className='list-none pl-0 font-sans xl:mt-4'>
-              <li className='pr-4'>
-                <Link
-                  className='hover:underline hover:text-[#2e71ea] font-bold'
-                  href={`mailto:${siteConfig.email}`}
-                >
-                  {siteConfig.email}
-                </Link>
-              </li>
+              {footerColumn1Links.map(({ title, link }: any, index: Key | null | undefined) => (
+                <li key={index} className='pr-4 mb-1'>
+                  <Link className='hover:underline hover:text-[#2e71ea]' href={link}>{title}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+          {/* Column 2 Links */}
+          <div className='w-full md:w-1/4 xl:w-1/4 flex flex-col items-start mt-8 md:mt-0'>
+            <ul className='list-none pl-0 font-sans xl:mt-4'>
+              {footerColumn2Links.map(({ title, link }: any, index: Key | null | undefined) => (
+                <li key={index} className='pr-4 mb-1'>
+                  <Link className='hover:underline hover:text-[#2e71ea]' href={link}>{title}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+          {/* Column 3 Links */}
+          <div className='w-full md:w-1/4 xl:w-1/4 flex flex-col items-start mt-8 md:mt-0'>
+            <ul className='list-none pl-0 font-sans xl:mt-4'>
+              {footerColumn3Links.map(({ title, link, isEmail, email }: any, index: Key | null | undefined) => (
+                <>
+                  <li key={`title-${index}`} className='pr-4 mb-1'>
+                    <span className={`${isEmail ? 'font-bold' : ''}`}>
+                      {title}
+                    </span>
+                  </li>
+                  {email && (
+                    <li key={`email-${index}`} className='pr-4 mb-1 mt-2'>
+                      <Link 
+                        className='hover:underline hover:text-[#2e71ea] text-sm' 
+                        href={link}
+                      >
+                        {email}
+                      </Link>
+                    </li>
+                  )}
+                </>
+              ))}
             </ul>
           </div>
         </div>

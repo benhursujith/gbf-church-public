@@ -10,7 +10,7 @@ export function SundaysFAQ() {
     },
     {
       question: 'Will I be singled out as a visitor?',
-      answer: "No, we won't put you on the spot. Welcome cards are available if you'd like to connect.",
+      answer: "No, we won't put you on the spot. The ushering team would welcome you in and help you find a spot to sit.",
     },
     {
       question: 'Where do I park?',

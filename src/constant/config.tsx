@@ -1,4 +1,4 @@
-import { Instagram, Rss, Youtube } from 'lucide-react';
+import { Instagram, Youtube } from 'lucide-react';
 import Link from 'next/link';
 
 export const siteConfig = {
@@ -47,23 +47,20 @@ export const sundaysHero = {
   header: 'Sundays',
   title: 'Join us on',
   subtitle: 'Sundays',
-  description: 'Experience meaningful worship, biblical teaching, and warm community every Sunday at Grace Bible Fellowship.',
   image: '/images/sermons.jpg',
 };
 
 export const sermonPageHero = {
   header: 'Sermons',
-  title: 'Watch. Learn.',
+  title: 'Hear. Learn.',
   subtitle: 'Apply.',
-  description:
-    'Welcome to our Sermons page, where you`ll find insightful teachings and inspiring messages to guide your spiritual journey and nourish your soul. Dive in today!',
   image: '/images/sermons.jpg',
   latestSermonTitle: 'Watch the latest Sermon',
   latestSermonDescription:
     'Join us for our latest Sunday Sermon, where we dive deep into the Word of God. Tune in for spiritual nourishment, uplifting messages, and a deeper understanding of biblical truths.',
   sermonSeriesTitle: 'Sermon Series',
   sermonSeriesDescription:
-    ' Delve into Our Sermon Series on Finding Meaning, Purpose,and Connection in Everyday Life.',
+    'Listen to our Sunday sermons which exposit the Scriptures and provide relevant life applications',
   sermonAPITitle: 'Explore the Series',
   sermonAPIDescription:
     ' Check back here to see if there`s any new content added.',
@@ -71,10 +68,8 @@ export const sermonPageHero = {
 
 export const podcastPageHero = {
   header: 'Life Topics',
-  title: 'Listen. Learn.',
+  title: 'Hear. Learn.',
   subtitle: 'Apply.',
-  description:
-    'Welcome to our Life Topics page, your gateway to captivating conversations and thought-provoking discussions. Tune in for insightful insights and inspiring stories, enriching your mind and fueling your curiosity. Start exploring today!',
   image: '/images/podcasts.jpg',
   podcastSeriesTitle: 'Life Topics Series',
   podcastSeriesDescription:
@@ -89,42 +84,38 @@ export const whoWeAreHero = {
   image: '/images/aboutus.jpg',
   timelineHeader: 'Our Church Timeline',
   timelineDescription:
-    'Our church has evolved significantly since 2002, with growth in membership, community engagement, and technological integration. Today, we stand as a beacon of faith and service, guided by our enduring commitment to spiritual growth and social impact.',
+    'Grace Bible Fellowship (GBF) is an elder-led, Bible-centered and discipleship-oriented church started in Jan 2023 as a church plant of Calvary Bible Fellowship (CBF) with a goal to build a community of Christ-followers in South Bangalore focused on exalting God, edifying and equipping each other and fulfilling the great commission of Jesus Christ.',
 };
 
 export const whatWeBelieveHero = {
   header: 'Statement of Faith',
   title: 'Our Core',
   subtitle: 'Beliefs.',
-  description:
-    'We are a gospel-centered community that celebrates the life, death, resurrection and teachings of Jesus.',
-  image: '/images/what.jpg',
+  image: '/images/sermons.jpg',
   whatWeDoTitle: 'What We Do',
   whatWeDoDescription:
     'We are committed to being a family made up of different generations, backgrounds, ethnicities and abilities. Unity in the midst of diversity is a big part of God`s Kingdom, and one we celebrate.',
   careGroupTitle: 'Care Group Schedule',
   careGroupDescription:
-    'Care groups provide a sense of family, deepen prayer life, offer support in crisis, facilitate sharing the faith, develop leadership, and enhance worship, aligning with the New Testament model of Christian community.',
+    'Care groups meet in homes in different areas of the city during the week. They provide a setting for spiritual growth through deeper Bible study and to build stronger relationships that facilitate discipleship and support for each other.',
 };
 
 export const whatWeBelieveSecondContainer = {
   title: 'Our Statement of Faith',
-  description: 'We are a gospel-centered community that celebrates the life, death, resurrection and teachings of Jesus.',
+  description: 'We are a Bible-centered community that seeks to exalt God, edify and equip believers through study of the Bible and discipleship, and participate in the great commission of Jesus Christ.',
 };
 
 export const leadershipPageHero = {
   header: 'Leadership',
   title: 'Meet Our',
   subtitle: 'Leaders.',
-  description:
-    'Welcome to our church leadership page. Here, you`ll find a dedicated team committed to serving our congregation, fostering spiritual growth, and supporting our community.',
   image: '/images/leadership.jpg',
   eldersTitle: 'Meet Our Elders',
   eldersDescription:
     'Grace Bible Fellowship follows the model of leadership by a plurality of Elders. Elders oversee the life, teaching, and mission of Grace Bible Fellowship, and work to keep everything we do focused on our vision to be the church and reach the city.',
   deaconsTitle: 'Meet Our Deacons',
   deaconsDescription:
-    'Deacons use their gifts to serve the Elders by providing  perspective, wisdom and counsel, and encouragement on church-wide theological or strategic matters',
+    'Deacons function under the direction of the elders and serve the church by using their gifts to take care of various aspects of running the church.',
 };
 
 export const leadershipElders = [
@@ -179,8 +170,6 @@ export const contactUsContent = {
   header: 'Contact Us',
   title: 'Connect With',
   subtitle: 'Us.',
-  description:
-    'Our Contact Us page is a dedicated platform for users to reach out and connect with us. Whether you have questions, feedback, or need support, we`re here to listen and assist you.',
   image: '/images/contact.jpg',
   location: 'https://maps.app.goo.gl/tM9nLGLn4k2NS2aFA',
   addressHeading: 'Sunday Worship Service',
@@ -363,7 +352,11 @@ export const footerQuickLinks = [
   },
 ];
 
-export const footerAboutLinks = [
+export const footerColumn1Links = [
+  {
+    title: 'Sundays',
+    link: '/sundays',
+  },
   {
     title: 'Our Story',
     link: '/who-we-are',
@@ -376,9 +369,29 @@ export const footerAboutLinks = [
     title: 'Leadership',
     link: '/leadership',
   },
+];
+
+export const footerColumn2Links = [
   {
     title: 'Care Groups',
-    link: '/what-we-believe',
+    link: '/care-groups',
+  },
+  {
+    title: 'Sermons',
+    link: '/sermons',
+  },
+  {
+    title: 'Life Topics',
+    link: '/podcasts',
+  },
+];
+
+export const footerColumn3Links = [
+  {
+    title: 'Reach Out',
+    link: `mailto:gracebiblefellowship.blr@gmail.com`,
+    isEmail: true,
+    email: 'gracebiblefellowship.blr@gmail.com',
   },
 ];
 
@@ -389,7 +402,11 @@ export const footerSocialLinks = [
   },
   {
     link: 'https://open.spotify.com/show/532PwUNiFxZNYK0faT8hg9?si=7160ad41bcfd49d8',
-    component: <Rss />,
+    component: (
+      <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+      </svg>
+    ),
   },
   {
     link: 'https://www.instagram.com/gracebiblefellowship_bangalore?utm_source=ig_web_button_share_sheet&igsh=cWwxMXNrb2h4YmFo',

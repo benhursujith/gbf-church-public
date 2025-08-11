@@ -9,9 +9,8 @@ import { CareGroups } from '@/components/whatwebelievepage/care-groups';
 export default function CareGroupsPage() {
   const heroData = {
     header: 'Care Groups',
-    title: 'Our',
-    subtitle: 'Care Groups',
-    description: whatWeBelieveHero.careGroupDescription,
+    title: 'Our local',
+    subtitle: 'gatherings',
     image: '/images/care-groups.jpg', // Updated to use the new care groups image
   };
   return (

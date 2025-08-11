@@ -23,6 +23,7 @@ export function EldersList() {
       <SubHeading
         title={leadershipPageHero.eldersTitle}
         description={leadershipPageHero.eldersDescription}
+        color="black"
       />
 
       {/* Elders */}

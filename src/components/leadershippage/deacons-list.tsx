@@ -11,10 +11,11 @@ export function DeaconsList() {
       <SubHeading
         title={leadershipPageHero.deaconsTitle}
         description={leadershipPageHero.deaconsDescription}
+        color="black"
       />
 
       {/* Deacons */}
-      <section className='relative z-10 overflow-hidden bg-gray-200 text-black '>
+      <section className='relative z-10 overflow-hidden bg-gray-200 text-black'>
         <div className='wrapper relative z-20 animate-in effect-fade-in entered mb-5'>
           <div className='pt-16 md:pt-24 pb-16 md:pb-24'>
             <div className='-my-4  flex flex-wrap'>

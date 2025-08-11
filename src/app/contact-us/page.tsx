@@ -5,7 +5,6 @@ import React from 'react';
 import 'react-toastify/dist/ReactToastify.css';
 
 import { Address } from '@/components/contactpage/address';
-import { FAQ } from '@/components/contactpage/faq';
 import ContactForm from '@/components/contactpage/form/contact-form';
 import { HeroHeading } from '@/components/layout/hero-heading';
 import { OtherPages } from '@/components/layout/other-pages';
@@ -22,8 +21,6 @@ export default function ContactUsPage() {
       <ContactForm />
       {/* Address */}
       <Address />
-      {/* FAQ */}
-      <FAQ />
       {/* Other pages links */}
       <OtherPages data1={otherPages[1]} data2={otherPages[2]} />
     </PageLayout>

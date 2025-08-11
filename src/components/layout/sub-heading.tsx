@@ -12,7 +12,7 @@ export function SubHeading({
   return (
     <section
       className={`relative z-10 overflow-hidden 
-    ${color === 'black' ? 'bg-black text-white' : 'bg-gray-200 text-black'}
+    ${color === 'black' ? 'bg-black text-white' : color === 'white' ? 'bg-white text-black' : 'bg-gray-200 text-black'}
     `}
     >
       <div className='wrapper py-12 md:py-24 lg:pt-32 lg:pb-0'>
