@@ -55,10 +55,10 @@ export function CareGroups() {
       />
       <section className='relative z-10 carousel-section overflow-hidden bg-white text-black'>
         <div className='wrapper relative z-20 animate-in effect-fade-in entered '>
-          <div className='pt-16 md:pt-24 pb-16 md:pb-24'>
+          <div className='pt-16 md:pt-24 pb-16 md:pb-24 mt-8 md:mt-0'>
             <Tabs defaultValue={tabList[0]} onValueChange={setActiveTab}>
               {/* Tab buttons */}
-              <div className='carousel-custom-nav flex justify-center mb-4 mt-4 px-2 md:px-4'>
+              <div className='carousel-custom-nav flex justify-center mb-4 mt-4 px-2 md:px-4 py-2'>
                 <TabsList className='w-full flex-row custom-caregroup-tabs'>
                   {tabList.map((tab: any, i: number) => (
                     <TabsTrigger

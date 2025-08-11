@@ -3744,6 +3744,9 @@ a:hover, a:focus {
   gap: 0;
   margin: 0 auto;
   padding: 0;
+  flex-wrap: wrap;
+  min-height: 60px;
+  position: relative;
 }
 .custom-belief-tab {
   background: transparent !important;
@@ -3782,6 +3785,8 @@ a:hover, a:focus {
   margin: 0 auto;
   padding: 0;
   flex-wrap: wrap;
+  min-height: 60px;
+  position: relative;
 }
 .custom-caregroup-tab {
   background: transparent !important;
@@ -3825,26 +3830,36 @@ a:hover, a:focus {
 /* Mobile responsive styles for tabs */
 @media (max-width: 768px) {
   .custom-caregroup-tabs {
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 0.5rem;
+    padding: 0.5rem;
+    min-height: 120px;
+    align-items: flex-start;
+    border-bottom: none;
   }
   
   .custom-caregroup-tab {
-    margin: 0 0.25rem;
+    margin: 0;
     font-size: 0.8rem;
     padding: 0.5rem 0.75rem;
+    flex-shrink: 0;
   }
   
   .custom-belief-tabs {
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 0.5rem;
+    padding: 0.5rem;
+    min-height: 120px;
+    align-items: flex-start;
+    border-bottom: none;
   }
   
   .custom-belief-tab {
-    margin: 0 0.25rem;
+    margin: 0;
     font-size: 0.8rem;
     padding: 0.5rem 0.75rem;
+    flex-shrink: 0;
   }
 }

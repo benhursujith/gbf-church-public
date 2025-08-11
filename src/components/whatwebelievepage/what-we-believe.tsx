@@ -83,10 +83,10 @@ export function WhatWeBelieve() {
       />
       <section className='relative z-10 overflow-hidden bg-black text-white'>
         <div className='wrapper relative z-20 animate-in effect-fade-in entered'>
-          <div className='pt-2 md:pt-4 pb-2 md:pb-4'>
+          <div className='pt-2 md:pt-4 pb-2 md:pb-4 mt-8 md:mt-0'>
             <Tabs defaultValue={tabList[0]} onValueChange={setActiveTab}>
               {/* Tab buttons */}
-              <div className='carousel-custom-nav flex justify-center mb-2 mt-2 px-2 md:px-4'>
+              <div className='carousel-custom-nav flex justify-center mb-2 mt-2 px-2 md:px-4 py-2'>
                 <TabsList className='w-full flex-row custom-belief-tabs'>
                   {tabList.map((tab: any, i: number) => (
                     <TabsTrigger
