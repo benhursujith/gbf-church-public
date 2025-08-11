@@ -20,7 +20,8 @@ export function CareGroups() {
       Object.values(tabList).map((tab: any, i) => (
         <TabsContent key={i} value={tabList[i]}>
           <div className='flex flex-col md:flex-row items-start justify-center gap-4 headline-defaults copy-defaults'>
-            <div className='w-full md:w-1/3 flex justify-center md:justify-end'>
+            {/* Map Section */}
+            <div className='w-full md:w-1/3 flex justify-center md:justify-end order-1 md:order-1'>
               <div className='decoupled-carousel bg-navy relative' style={{ width: '100%', maxWidth: '400px' }}>
                 <iframe
                   src={careGroups[tab].mapEmbed}
@@ -34,7 +35,8 @@ export function CareGroups() {
                 />
               </div>
             </div>
-            <div className='w-full md:w-1/2 px-4 py-4 md:py-8 flex justify-start'>
+            {/* Content Section */}
+            <div className='w-full md:w-1/2 px-4 py-4 md:py-8 flex justify-start order-2 md:order-2'>
               {careGroups[tab].content}
             </div>
           </div>
