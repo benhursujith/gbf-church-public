@@ -2,6 +2,7 @@
 'use client';
 
 import 'react-toastify/dist/ReactToastify.css';
+import { Suspense } from 'react';
 
 import { HeroHeading } from '@/components/layout/hero-heading';
 import { OtherPages } from '@/components/layout/other-pages';
@@ -34,7 +35,9 @@ export default function SermonPage() {
       {/* Latest Sermon */}
       <LatestSermon />
       {/* Sermons list */}
-      <SermonsList />
+      <Suspense fallback={<div className="py-12 text-center">Loading sermons...</div>}>
+        <SermonsList />
+      </Suspense>
       {/* Other pages links */}
       <OtherPages data1={otherPages[0]} data2={otherPages[1]} />
     </PageLayout>
