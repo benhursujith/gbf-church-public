@@ -1,9 +1,9 @@
 import { BookOpen, Clock, GraduationCap, Heart, Info, Mic, Users } from 'lucide-react';
 
 const timeline = [
-  { time: '9:45', label: 'Worship', desc: 'A time of audible congregational worship', icon: <Clock className="h-6 w-6 text-blue-400" /> },
-  { time: '10:20', label: "Lord's Table", desc: "Weekly remembrance of Christ through the emblems", icon: <BookOpen className="h-6 w-6 text-blue-400" /> },
-  { time: '10:50', label: 'Sermon', desc: 'Expository sermon series', icon: <Mic className="h-6 w-6 text-blue-400" /> },
+  { time: '9:45', label: 'Worship', desc: 'A time of congregational praise and thanksgiving', icon: <Clock className="h-6 w-6 text-blue-400" /> },
+  { time: '10:20', label: "Lord's Table", desc: "Remembrance of Christ by partaking of the emblems", icon: <BookOpen className="h-6 w-6 text-blue-400" /> },
+  { time: '10:50', label: 'Sermon', desc: 'Expository sermon with relevant life applications from God\'s Word', icon: <Mic className="h-6 w-6 text-blue-400" /> },
   { time: '11:20', label: 'Announcements and Prayer', desc: 'Community updates and a time of prayer', icon: <Info className="h-6 w-6 text-blue-400" /> },
   { time: '11:30', label: 'Fellowship', desc: 'Connect with others over refreshments', icon: <Users className="h-6 w-6 text-blue-400" /> },
   { time: '12:00', label: 'Equip Sessions | Kids\' Ministry', desc: 'Practical sessions for daily living | Kids praise & learn', icon: <div className="flex gap-1"><GraduationCap className="h-5 w-5 text-blue-400" /><Heart className="h-5 w-5 text-blue-400" /></div> },

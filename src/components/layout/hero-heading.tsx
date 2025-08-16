@@ -50,28 +50,45 @@ export function HeroHeading({ data }: HeroProps) {
               style={{ transform: 'translate3d(0px, -33px, 0px)' }}
             >
               {typeof image === 'string' && image.startsWith('/') && (
-                <Image
-                  data-loaded='false'
-                  onLoad={(event) => {
-                    event.currentTarget.setAttribute('data-loaded', 'true');
-                  }}
-                  className='relative lazyloaded data-[loaded=false]:animate-pulse data-[loaded=false]:bg-gray-100/10'
-                  width='1300'
-                  height='745'
-                  alt={title || header}
-                  src={image}
-                  sizes='100vw'
-                />
+                <div className="relative">
+                  <Image
+                    data-loaded='false'
+                    onLoad={(event) => {
+                      event.currentTarget.setAttribute('data-loaded', 'true');
+                    }}
+                    className='relative lazyloaded data-[loaded=false]:animate-pulse data-[loaded=false]:bg-gray-100/10'
+                    width='1300'
+                    height='745'
+                    alt={title || header}
+                    src={image}
+                    sizes='100vw'
+                    style={{
+                      objectFit: 'cover',
+                      objectPosition: 'center 14%' // This crops from the top by ~1/7
+                    }}
+                  />
+                  {/* Subtle overlay for better text visibility */}
+                  <div className="absolute inset-0 bg-black opacity-25 rounded-lg"></div>
+                </div>
               )}
               {typeof image === 'string' && image.startsWith('http') && (
-                <img
-                  className='relative lazyloaded data-[loaded=false]:animate-pulse data-[loaded=false]:bg-gray-100/10'
-                  width='1300'
-                  height='745'
-                  alt={title || header}
-                  src={image}
-                  style={{ width: '100%', height: 'auto' }}
-                />
+                <div className="relative">
+                  <img
+                    className='relative lazyloaded data-[loaded=false]:animate-pulse data-[loaded=false]:bg-gray-100/10'
+                    width='1300'
+                    height='745'
+                    alt={title || header}
+                    src={image}
+                    style={{ 
+                      width: '100%', 
+                      height: 'auto',
+                      objectFit: 'cover',
+                      objectPosition: 'center 14%' // This crops from the top by ~1/7
+                    }}
+                  />
+                  {/* Subtle overlay for better text visibility */}
+                  <div className="absolute inset-0 bg-black opacity-25 rounded-lg"></div>
+                </div>
               )}
             </div>
           </div>

@@ -14,10 +14,10 @@ export function SundayServiceBlock() {
             </div>
             <div className="flex items-center gap-3 mb-2">
               <MapPin className="h-6 w-6 text-blue-600" />
-              <span className="text-base font-semibold">Christ University Back Gate (4)</span>
+              <span className="text-base font-semibold">Christ College Back Gate, DVK Annexe Building</span>
             </div>
             <div className="text-base text-gray-700 mb-4">
-              1st Main Rd, near CBS ATM, Tavarekere, Bhavani Nagar, S.G. Palya, Bengaluru, Karnataka 560029
+              1st Main Rd, near CSB ATM, Tavarekere, Bhavani Nagar, S.G. Palya, Bengaluru, Karnataka 560029
             </div>
           </div>
           {/* Map Embed */}

@@ -29,7 +29,7 @@ export const homepageChurchLocation = {
   title: 'Sunday Worship Service',
   subtitle: 'Join us every Sunday at 9:45 AM IST',
   description:
-    'Christ university back gate (4) 1st Main Rd, near CBS ATM, Tavarekere, Bhavani Nagar, S.G. Palya, Bengaluru, Karnataka 560029',
+    'Christ College Back Gate, DVK Annexe Building, 1st Main Rd, near CSB ATM, Tavarekere, Bhavani Nagar, S.G. Palya, Bengaluru, Karnataka 560029',
   link: 'https://maps.app.goo.gl/tM9nLGLn4k2NS2aFA',
   image: '/images/chair.jpg',
   linkText: 'View on maps',
@@ -109,7 +109,7 @@ export const leadershipPageHero = {
   header: 'Leadership',
   title: 'Meet Our',
   subtitle: 'Leaders.',
-  image: '/images/leadership.jpg',
+  image: '/images/eldershero.png',
   eldersTitle: 'Meet Our Elders',
   eldersDescription:
     'Grace Bible Fellowship follows the model of leadership by a plurality of Elders. Elders oversee the life, teaching, and mission of Grace Bible Fellowship, and work to keep everything we do focused on our vision to be the church and reach the city.',
@@ -175,7 +175,7 @@ export const contactUsContent = {
   addressHeading: 'Sunday Worship Service',
   addressTitle: 'Grace Bible Fellowship',
   address:
-    'Christ university back gate (4) 1st Main Rd, near CBS ATM, Tavarekere, Bhavani Nagar, S.G. Palya, Bengaluru, Karnataka 560029',
+    'Christ College Back Gate, DVK Annexe Building, 1st Main Rd, near CSB ATM, Tavarekere, Bhavani Nagar, S.G. Palya, Bengaluru, Karnataka 560029',
   addressImage: '/images/jest.jpg',
   disclaimer:
     'When filling out this form, we kindly request that you respect the content provided. Once your information is received, we will promptly respond to your request. Your message is valuable to us, and we appreciate your cooperation and understanding.',
