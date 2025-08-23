@@ -28,20 +28,21 @@ function parseCSV(text: string) {
 }
 
 export async function fetchSermonsFromSheet() {
-  const csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vR29YwgCPzDXFRmQW2f6xaoGn80ebtl-IXGcvdx-JJq_K1XMu7tF1kDAS7qhdesSbGvD3MizoZwLIBc/pub?output=csv';
-  const res = await fetch(csvUrl);
-  const text = await res.text();
-  const items = parseCSV(text);
-  return items
-    .map(obj => ({
-      title: obj.title,
-      description: obj.description,
-      image: obj.channel === 'podcast' ? '' : obj.image,
-      link: obj.link,
-      channel: obj.channel,
-      type: obj.type,
-      series: obj.series, // <-- add this line
-      date: obj.date,     // <-- add this if you want to sort by date
-    }))
-    .filter(s => s.title && s.link && s.channel);
+  try {
+    // Use the API route to avoid CORS issues
+    const res = await fetch('/api/sermons');
+    
+    if (!res.ok) {
+      console.warn('API route not accessible');
+      return [];
+    }
+    
+    const data = await res.json();
+    console.log('Fetched sermons via API:', data.length);
+    
+    return data;
+  } catch (error) {
+    console.error('Error fetching sermons from API:', error);
+    return [];
+  }
 } 

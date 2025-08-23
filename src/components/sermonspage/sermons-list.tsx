@@ -1,7 +1,9 @@
-import { useState, useEffect } from 'react';
+import {Search } from 'lucide-react';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { Search, Filter } from 'lucide-react';
+import { useEffect,useState } from 'react';
+
 import { SubHeading } from '@/components/layout/sub-heading';
+
 import { sermonPageHero } from '@/constant/config';
 import { fetchSermonsFromSheet } from '@/utils/fetch-sermons-from-sheet';
 
@@ -28,9 +30,16 @@ export function SermonsList() {
   useEffect(() => {
     fetchSermonsFromSheet()
       .then((data) => {
-        setSermons(data.filter((s) => s.type === 'sermon'));
+        // Filter for sermons only
+        const sermonData = data.filter((s: any) => s.type === 'sermon');
+        
+        // Sort in reverse order (latest first - last entry in sheet)
+        const sortedSermons = sermonData.reverse();
+        
+        setSermons(sortedSermons);
       })
-      .catch(() => {
+      .catch((error) => {
+        console.error('Error in sermons list:', error);
         setSermons([]);
       });
   }, []);
@@ -67,9 +76,9 @@ export function SermonsList() {
   const handleSeriesChange = (selectedSeries: string) => {
     setSeries(selectedSeries);
     if (selectedSeries === 'All') {
-      router.push('/sermons');
+      router.replace('/sermons', { scroll: false });
     } else {
-      router.push(`/sermons?series=${encodeURIComponent(selectedSeries)}`);
+      router.replace(`/sermons?series=${encodeURIComponent(selectedSeries)}`, { scroll: false });
     }
   };
 
@@ -213,10 +222,25 @@ export function SermonsList() {
 
 // Helper function to get YouTube embed URL from a standard watch URL
 function getYouTubeEmbedUrl(url: string) {
-  // Only support standard watch URLs
-  const match = url.match(/(?:https?:\/\/)?(?:www\.)?youtube\.com\/watch\?v=([\w-]{11})/);
-  if (match && match[1]) {
-    return `https://www.youtube.com/embed/${match[1]}`;
+  // Support both standard watch URLs and shortened youtu.be URLs
+  let videoId = null;
+  
+  // Try to match standard YouTube watch URL
+  const watchMatch = url.match(/(?:https?:\/\/)?(?:www\.)?youtube\.com\/watch\?v=([\w-]{11})/);
+  if (watchMatch && watchMatch[1]) {
+    videoId = watchMatch[1];
   }
+  
+  // Try to match shortened youtu.be URL
+  const shortMatch = url.match(/(?:https?:\/\/)?(?:www\.)?youtu\.be\/([\w-]{11})/);
+  if (shortMatch && shortMatch[1]) {
+    videoId = shortMatch[1];
+  }
+  
+  if (videoId) {
+    return `https://www.youtube.com/embed/${videoId}`;
+  }
+  
+  console.warn('Could not extract YouTube video ID from URL:', url);
   return '';
 }

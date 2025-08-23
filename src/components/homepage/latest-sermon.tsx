@@ -1,5 +1,6 @@
-import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
+
 import { homepageLatestSermon } from '@/constant/config';
 import { fetchSermonsFromSheet } from '@/utils/fetch-sermons-from-sheet';
 
@@ -8,19 +9,35 @@ export function LatestSermon() {
 
   useEffect(() => {
     fetchSermonsFromSheet().then(items => {
-      const sermons = items.filter(item => item.type === 'sermon');
-      // Sort by date if available, else by order in sheet
-      sermons.sort((a, b) => (a.date || '').localeCompare(b.date || ''));
-      if (sermons.length > 0) {
-        setLatestSermon(sermons[sermons.length - 1]);
+      // Filter for sermons only
+      const sermons = items.filter((item: any) => item.type === 'sermon');
+      
+      // Sort in reverse order (latest first - last entry in sheet)
+      const sortedSermons = sermons.reverse();
+      
+      if (sortedSermons.length > 0) {
+        setLatestSermon(sortedSermons[0]); // First item after reverse sort is the latest
       }
     });
   }, []);
 
   // Helper to extract YouTube video ID from link
   function getYoutubeId(url: string) {
-    const match = url.match(/(?:v=|youtu.be\/|embed\/)([\w-]{11})/);
-    return match ? match[1] : '';
+    let videoId = null;
+    
+    // Try to match standard YouTube watch URL
+    const watchMatch = url.match(/(?:https?:\/\/)?(?:www\.)?youtube\.com\/watch\?v=([\w-]{11})/);
+    if (watchMatch && watchMatch[1]) {
+      videoId = watchMatch[1];
+    }
+    
+    // Try to match shortened youtu.be URL
+    const shortMatch = url.match(/(?:https?:\/\/)?(?:www\.)?youtu\.be\/([\w-]{11})/);
+    if (shortMatch && shortMatch[1]) {
+      videoId = shortMatch[1];
+    }
+    
+    return videoId || '';
   }
 
   return (

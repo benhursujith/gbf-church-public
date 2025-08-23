@@ -28,18 +28,21 @@ function parseCSV(text: string) {
 }
 
 export async function fetchPodcastsFromSheet() {
-  const csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vR29YwgCPzDXFRmQW2f6xaoGn80ebtl-IXGcvdx-JJq_K1XMu7tF1kDAS7qhdesSbGvD3MizoZwLIBc/pub?output=csv';
-  const res = await fetch(csvUrl);
-  const text = await res.text();
-  const items = parseCSV(text);
-  return items
-    .filter((p: any) => p.type === 'podcast')
-    .map((obj: any) => ({
-      title: obj.title,
-      description: obj.description,
-      image: obj.image, // image is optional
-      link: obj.link,   // use the correct link column
-      date: obj.date,
-    }))
-    .filter((p: any) => p.title && p.link);
+  try {
+    // Use the API route to avoid CORS issues
+    const res = await fetch('/api/podcasts');
+    
+    if (!res.ok) {
+      console.warn('API route not accessible');
+      return [];
+    }
+    
+    const data = await res.json();
+    console.log('Fetched podcasts via API:', data.length);
+    
+    return data;
+  } catch (error) {
+    console.error('Error fetching podcasts from API:', error);
+    return [];
+  }
 } 

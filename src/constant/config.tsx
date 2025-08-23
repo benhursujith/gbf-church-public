@@ -13,7 +13,7 @@ export const homepageHero = {
   header: 'WELCOME TO',
   title: 'Grace Bible Fellowship',
   description:
-    'To all who are weary, mourning, struggling - this church opens wide her doors in the name of Jesus Christ.',
+    'A vibrant, Bible-centered church community in Bangalore seeking to build up disciples of Jesus Christ',
   video: '/videos/hero.mp4',
 };
 
@@ -419,7 +419,7 @@ export const homepagePodcasts = [
     id: 'PL8jyQKbc-svJGg7uyGJd717PM5aF9yeBt',
     title: 'Shepherding A Child`s Heart',
     description:
-      'Today`s parents are frustrated and confused.Children don`t act like they should and parents don`t understand why. Many have concluded the job is impossible. Some simply turn away in frustration. Meanwhile, a generation of children is being wasted.',
+      'Biblical parenting in a modern world. Discover how to guide your children`s hearts toward God through loving discipline, intentional discipleship, and gospel-centered parenting. Learn practical wisdom for raising children who love Jesus and live for His glory.',
     image: '/images/parent.jpg',
     link: '/podcast/shepherding-a-childs-heart',
   },
