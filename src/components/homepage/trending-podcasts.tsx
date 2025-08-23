@@ -11,7 +11,7 @@ export function TrendingPodcasts() {
   useEffect(() => {
     fetchPodcastsFromSheet().then(items => {
       // Sort by date descending if available
-      items.sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+      items.sort((a: any, b: any) => (b.date || '').localeCompare(a.date || ''));
       setPodcasts(items.slice(0, 3));
     });
   }, []);
