@@ -2,7 +2,7 @@ import { Instagram, Youtube } from 'lucide-react';
 import Link from 'next/link';
 
 export const siteConfig = {
-  title: 'Grace Bible Fellowship',
+  title: 'Grace Bible Fellowship, Bangalore',
   description: 'Salt And Light',
   url: 'https://cbf-church.org',
   email: 'gracebiblefellowship.blr@gmail.com',
