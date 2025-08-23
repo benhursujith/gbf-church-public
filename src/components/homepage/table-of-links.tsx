@@ -19,10 +19,10 @@ export function TableOfLinks() {
       const uniqueSeries = Array.from(
         new Set(
           data
-            .filter((s) => s.type === 'sermon' && s.series)
-            .map((s) => s.series)
+            .filter((s: any) => s.type === 'sermon' && s.series)
+            .map((s: any) => s.series)
         )
-      ).filter(Boolean);
+      ).filter((s): s is string => Boolean(s));
       setSeries(uniqueSeries.slice(0, 3));
     });
   }, []);
