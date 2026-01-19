@@ -3,6 +3,16 @@
   "buildCommand": "pnpm install && pnpm run build",
   "installCommand": "pnpm install",
   "framework": "nextjs",
+  "rewrites": [
+    { 
+      "source": "/camp", 
+      "destination": "https://gbfcamp.paultharun.com" 
+    },
+    { 
+      "source": "/camp/:match*", 
+      "destination": "https://gbfcamp.paultharun.com/:match*" 
+    }
+  ],
   "headers": [
     {
       "source": "/fonts/inter-var-latin.woff2",
