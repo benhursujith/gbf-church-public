@@ -10,14 +10,14 @@ export function SundayServiceBlock() {
             <h2 className="text-3xl font-bold mb-4">Sunday Worship Service</h2>
             <div className="flex items-center gap-3 mb-2">
               <Clock className="h-6 w-6 text-blue-600" />
-              <span className="text-lg font-semibold">9:45 AM – 12:00 PM</span>
+              <span className="text-lg font-semibold">9:30 AM – 11:30 PM</span>
             </div>
             <div className="flex items-center gap-3 mb-2">
               <MapPin className="h-6 w-6 text-blue-600" />
-              <span className="text-base font-semibold">Christ College Back Gate, DVK Annexe Building</span>
+              <span className="text-base font-semibold">Christ College Back Gate, DVK Annexe 2nd floor</span>
             </div>
             <div className="text-base text-gray-700 mb-4">
-              1st Main Rd, near CSB ATM, Tavarekere, Bhavani Nagar, S.G. Palya, Bengaluru, Karnataka 560029
+              2nd Floor 1st Main Rd, near CSB ATM, Tavarekere, Bhavani Nagar, S.G. Palya, Bengaluru
             </div>
           </div>
           {/* Map Embed */}

@@ -27,9 +27,9 @@ export const homepageLatestSermon = {
 
 export const homepageChurchLocation = {
   title: 'Sunday Worship Service',
-  subtitle: 'Join us every Sunday at 9:45 AM IST',
+  subtitle: 'Join us every Sunday at 9:30 AM - 11:30 AM IST',
   description:
-    'Christ College Back Gate, DVK Annexe Building, 1st Main Rd, near CSB ATM, Tavarekere, Bhavani Nagar, S.G. Palya, Bengaluru, Karnataka 560029',
+    'Christ College Back Gate, DVK Annexe, 2nd Floor 1st Main Rd, near CSB ATM, Tavarekere, Bhavani Nagar, S.G. Palya, Bengaluru, Karnataka 560029',
   link: 'https://maps.app.goo.gl/tM9nLGLn4k2NS2aFA',
   image: '/images/chair.jpg',
   linkText: 'View on maps',
@@ -128,7 +128,11 @@ export const leadershipElders = [
   {
     name: 'George Thomas',
     title: 'ELDER',
-    bio: "George (Liju) was born and brought up in Doha, landed in India as a teenager and has been here ever since. His education has taken him through Trivandrum, Chennai and Pune until he landed in Bangalore where he works in the IT sector. He loves spending time with people one-on-one and in small groups, preferably over a lovely cup of chai, to enable & empower them to discover God's Word for themselves. He and his lovely wife Deepa have the privilege and responsibility of raising and homeschooling their children: Yohan, Yana and Yanica, who keep him on his toes and drive him back to God!",
+    bio: `George (Liju) was born and raised in Doha and moved to India as a teenager, where he has lived ever since. His educational journey took him through Trivandrum, Chennai, and Pune before settling in Bangalore, where he works in the IT sector.
+
+He enjoys investing in people one-on-one and in small groups—often over a good cup of chai—helping them engage personally with God’s Word through honest questions, thoughtful reflection, and sound-boarding as they seek biblical wisdom for life.
+
+Liju and his wife Deepa are grateful for the privilege of raising their three growing children—Yohan, Yana, and Yanica—who continually remind them of their dependence on God.`,
     image: '/images/Liju.png',
   },
   {
@@ -175,7 +179,7 @@ export const contactUsContent = {
   addressHeading: 'Sunday Worship Service',
   addressTitle: 'Grace Bible Fellowship',
   address:
-    'Christ College Back Gate, DVK Annexe Building, 1st Main Rd, near CSB ATM, Tavarekere, Bhavani Nagar, S.G. Palya, Bengaluru, Karnataka 560029',
+    'Christ College Back Gate, DVK Annexe 2nd Floor, 1st Main Rd, near CSB ATM, Tavarekere, Bhavani Nagar, S.G. Palya, Bengaluru, Karnataka 560029',
   addressImage: '/images/jest.jpg',
   disclaimer:
     'When filling out this form, we kindly request that you respect the content provided. Once your information is received, we will promptly respond to your request. Your message is valuable to us, and we appreciate your cooperation and understanding.',
@@ -404,7 +408,7 @@ export const footerSocialLinks = [
     link: 'https://open.spotify.com/show/532PwUNiFxZNYK0faT8hg9?si=7160ad41bcfd49d8',
     component: (
       <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+        <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z" />
       </svg>
     ),
   },
@@ -672,7 +676,7 @@ export const careGroups = [
       <>
         <div className='carousel-cell w-full'>
           <h3>Sarjapur Rd Care Group</h3>
-          <p className='subhead'>Time : 7:00PM, Wednesday</p>
+          <p className='subhead'>Time : 7:00PM, Friday</p>
           <div className='md:text-sm lg:text-base xl:text-lg'>
             <p>
               <strong>Spoc: Ben Kurian</strong>
@@ -692,7 +696,7 @@ export const careGroups = [
       <>
         <div className='carousel-cell w-full'>
           <h3>Marathahalli Care Group</h3>
-          <p className='subhead'>Time : 7:30PM, Thursday</p>
+          <p className='subhead'>Time : 7:00PM, Friday</p>
           <div className='md:text-sm lg:text-base xl:text-lg'>
             <p>
               <strong>Spoc: George Mattackal</strong>
@@ -712,7 +716,7 @@ export const careGroups = [
       <>
         <div className='carousel-cell w-full'>
           <h3>J.P Nagar Care Group</h3>
-          <p className='subhead'>Time : 7:30PM, Friday</p>
+          <p className='subhead'>Time : 7:00PM, Friday</p>
           <div className='md:text-sm lg:text-base xl:text-lg'>
             <p>
               <strong>Spoc: Ramanan</strong>
@@ -732,7 +736,7 @@ export const careGroups = [
       <>
         <div className='carousel-cell w-full'>
           <h3>Electronic City Care Group</h3>
-          <p className='subhead'>Time : 8:00PM, Friday</p>
+          <p className='subhead'>Time : 7:00PM, Friday</p>
           <div className='md:text-sm lg:text-base xl:text-lg'>
             <p>
               <strong>Spoc: Jean Thomas</strong>
@@ -746,26 +750,26 @@ export const careGroups = [
     ),
     mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31120.66348947178!2d77.63522931963954!3d12.837917079147275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae6c8a7750e1c3%3A0x4a5cfc0fce5af71d!2sElectronic%20City%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1752741346091!5m2!1sen!2sin',
   },
-  {
-    title: 'KORAMANGALA',
-    content: (
-      <>
-        <div className='carousel-cell w-full'>
-          <h3>Koramangala Care Group</h3>
-          <p className='subhead'>Time : 5:30PM, Saturday</p>
-          <div className='md:text-sm lg:text-base xl:text-lg'>
-            <p>
-              <strong>Spoc: Justus George</strong>
-            </p>
-            <p>
-              The Koramangala Care group gathers every Saturday at 5:30 PM. They spend their time singing together, sharing, and learning from the Word of God. Each care group is followed by fellowship over dinner.
-            </p>
-          </div>
-        </div>
-      </>
-    ),
-    mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15556.441550940655!2d77.60182550967998!3d12.900622829044938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae14eec814197d%3A0xcf0ad378f26271e9!2sBommanahalli%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1752741318849!5m2!1sen!2sin',
-  },
+  /* {
+     title: 'KORAMANGALA',
+     content: (
+       <>
+         <div className='carousel-cell w-full'>
+           <h3>Koramangala Care Group</h3>
+           <p className='subhead'>Time : 5:30PM, Saturday</p>
+           <div className='md:text-sm lg:text-base xl:text-lg'>
+             <p>
+               <strong>Spoc: Justus George</strong>
+             </p>
+             <p>
+               The Koramangala Care group gathers every Saturday at 5:30 PM. They spend their time singing together, sharing, and learning from the Word of God. Each care group is followed by fellowship over dinner.
+             </p>
+           </div>
+         </div>
+       </>
+     ),
+     mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15556.441550940655!2d77.60182550967998!3d12.900622829044938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae14eec814197d%3A0xcf0ad378f26271e9!2sBommanahalli%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1752741318849!5m2!1sen!2sin',
+   },*/
 ];
 
 export const ourBeliefs = [
