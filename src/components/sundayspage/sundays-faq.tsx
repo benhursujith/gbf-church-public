@@ -6,7 +6,7 @@ export function SundaysFAQ() {
     },
     {
       question: 'How long is the service?',
-      answer: 'Services last approximately 2 hours and 15 minutes, including worship, message, fellowship, and additional activities for kids and adults.',
+      answer: 'The Sunday Service last approximately 2 hours followed by a time for fellowship and additional activities for kids and adults.',
     },
     {
       question: 'Will I be singled out as a visitor?',
