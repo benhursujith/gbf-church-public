@@ -5,7 +5,7 @@ import { otherPages } from '@/constant/config';
 
 interface WorkInProgressProps {
   pageTitle: string;
-  pageDescription: string;
+  pageDescription: string | React.ReactNode;
   otherPagesData1?: typeof otherPages[0];
   otherPagesData2?: typeof otherPages[1];
 }
