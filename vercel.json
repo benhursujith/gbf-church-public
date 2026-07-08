@@ -3,6 +3,10 @@
   "buildCommand": "pnpm install && pnpm run build",
   "installCommand": "pnpm install",
   "framework": "nextjs",
+  "redirects": [
+    { "source": "/music", "destination": "https://music.gbf-blr.com", "permanent": false },
+    { "source": "/music/:path*", "destination": "https://music.gbf-blr.com/:path*", "permanent": false }
+  ],
   "rewrites": [
     { 
       "source": "/camp", 
